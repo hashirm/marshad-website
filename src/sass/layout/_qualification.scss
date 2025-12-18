@@ -1,0 +1,112 @@
+main.qualification{
+    .single-education-details{
+        min-height: 100%;
+        margin-bottom:400px;
+        margin-top: 24px;
+
+        @include media-breakpoint-down(xl){
+            margin-bottom: 100px;
+        }
+
+        p{
+            margin-bottom: 32px;
+        }
+
+        .single-education-title{
+            margin-bottom:16px;
+        }
+        ul{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto;
+
+            @include media-breakpoint-down(lg){
+                grid-template-columns: auto auto;
+            }
+            @include media-breakpoint-down(sm){
+                grid-template-columns: auto;
+            }
+            margin-bottom: 0;
+            row-gap: 24px;
+            column-gap: 50px;
+            @include media-breakpoint-down(xl){
+                max-height: 100%;
+            }
+            li{
+                column-gap: 12px;
+
+                p{
+                    display: -webkit-box;
+                    -webkit-line-clamp: 1;
+                    -webkit-box-orient: vertical;
+                    overflow: hidden;
+                    @include media-breakpoint-down(sm){
+                        font-size: 16px;
+                    }
+                }
+            }
+        }
+    }
+    
+}
+
+main.studies-possibilities{
+    .single-education-details{
+        margin-bottom: 100px;
+       ul{
+        display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto;
+
+            @include media-breakpoint-down(lg){
+                grid-template-columns: auto auto;
+            }
+            @include media-breakpoint-down(sm){
+                grid-template-columns: auto;
+            }
+        column-gap: 50px;
+        @include media-breakpoint-down(xl){
+            max-height: 100%;
+        }
+       }
+    }
+}
+
+main.career-option{
+
+    .single-education-details{
+        @include media-breakpoint-down(sm){
+            margin-bottom: 30px;
+        }
+        .single-education-title{
+             margin-bottom:60px;
+             @include media-breakpoint-down(sm){
+                margin-bottom: 30px;
+                
+             }
+        }
+        ul{
+            display: grid;
+            grid-template-columns: auto auto auto;
+            grid-template-rows: auto;
+
+            @include media-breakpoint-down(lg){
+                grid-template-columns: auto auto;
+            }
+            @include media-breakpoint-down(sm){
+                grid-template-columns: auto;
+                padding-inline-start: 30px;
+                row-gap: 8px;
+            }
+            img{
+                width: 10px;
+            }
+            // max-height: 295px;
+        }
+    }
+    
+}
+
+
+
+

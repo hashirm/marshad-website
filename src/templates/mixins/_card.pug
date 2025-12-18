@@ -1,0 +1,10 @@
+mixin card(btnText, title, imgSrc, ...items)
+    .cards.d-flex
+        .card-text
+            a(href="#")= btnText
+            h3= title
+            ul
+                each item in items
+                    li= item 
+        .card-img 
+            img(src= imgSrc alt="")

@@ -1,0 +1,41 @@
+.dashboard-header-modal
+    #signUpmodal.modal.fade(aria-hidden='true' aria-labelledby='signUpmodalLabel' tabindex='-1')
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                .modal-body
+                    .modal-body-content-wrapper.d-flex 
+                        .img-content 
+                            img(src="assets/images/men-women.png", alt="", srcset="")
+                        .form-content.signup.w-100 
+                            h2 Create account 
+                            p Enter the following details 
+                            form(action="#")
+                                label(for="") Full name 
+                                input(type="text" class="form-control" placeholder="Full name" required)
+                                label(for="") Email
+                                input(type="email" class="form-control" placeholder="Email" required)
+                                label.d-block(for="") Mobile number 
+                                input(type="number" id="mobile_code" class="form-control" placeholder="Phone Number" name="name" style="padding-left:144px;" required)
+                                label(for="") Password
+                                .password-field.position-relative 
+                                    img.eye-icon.position-absolute(src="assets/images/eye-01.png", alt="", srcset="") 
+                                    input.password-textBox(type="password" class="form-control" placeholder="Password" required) 
+                                label(for="") Confirm Password
+                                .password-field.position-relative 
+                                    img.eye-icon.position-absolute(src="assets/images/eye-01.png", alt="", srcset="")  
+                                    input.password-textBox(type="password" class="form-control" placeholder="Confirm Password" required)
+                                .select-field.position-relative
+                                    label(for="") Persona
+                                    select(name="menu" id="meun-items" class="d-block w-100")
+                                        option(disabled selected)
+                                            | Select Cource
+                                        option(value="html")
+                                            | HTML
+                                        option(value="css")
+                                            | CSS
+                                        option(value="js")
+                                            | JAVASCRIPT
+                                        option(value="c")
+                                            | LANGUAGE
+                                input(type="submit" value="Next" class="btn-large text-white form-control")

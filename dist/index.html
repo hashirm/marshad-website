@@ -1,0 +1,420 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="assets/css/slick.css">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&amp;display=swap">
+    </noscript>
+    <link rel="stylesheet" href="assets/css/app.min.css" media="print" onload="this.onload=null;this.removeAttribute('media');">
+    <noscript>
+      <link rel="stylesheet" href="assets/css/app.min.css">
+    </noscript>
+    <title>Home page</title>
+  </head>
+  <body>
+    <div class="homepage-modal modal fade" id="firstVisitModal" tabindex="-1" aria-labelledby="modalLabel" aria-hidden="true">
+      <div class="modal-dialog modal-dialog-centered">
+        <div class="modal-content">
+          <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+          <div class="modal-body d-flex"><img src="assets/images/join-now.png" alt="" srcset="">
+            <div class="homepage-modal-content"> <img class="align-self-center align-self-sm-start" src="assets/images/border-line-popup.png" alt="" srcset=""><img class="home-page-logo" src="assets/images/homepage-modal-logo.png" alt="" srcset="">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ornare eros eget justo scelerisque suscipit. Mauris mattis ex mauris, non tempus felis dapibus in.</p><a class="btn-large homepage-modal-btn text-decoration-none text-white" href="javascript:void(0)">Learn more</a>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <main> 
+      <section class="hero-section">
+        <div class="header-content position-relative"> 
+          <header> 
+            <nav class="d-flex justify-content-between align-items-center flex-column flex-lg-row nav-height">
+              <div class="logo align-self-start d-flex justify-content-between align-items-center w-100"><a href="http://localhost:3000/"> <img src="assets/images/marshad-logo.png" alt="logo"></a>
+                <div class="nav-icon d-lg-none d-block"><img src="assets/images/icons/mobile-nav.png" alt="" srcset=""></div>
+              </div>
+              <div class="header-content d-flex flex-column align-items-center flex-lg-row row-gap-2"> 
+                <div class="search"> 
+                  <form action=""><img src="assets/images/search-icon.png" alt="">
+                    <input type="text" placeholder="What are you looking for?">
+                  </form>
+                </div><a class="lang-switcher text-decoration-none d-flex justify-content-start align-items-center gap-2 w-100" href="#"> <img src="assets/images/icons/ar.png" alt="" srcset=""></a><a class="lang-switcher text-decoration-none d-flex justify-content-start align-items-center gap-2 d-none w-100" href="#">
+                   EN </a>
+                <div class="purchase-btn-wrapper">
+                  <button class="btn-large border-0 text-white">Purchase Majors Guide<img class="position-absolute" src="assets/images/icons/arrowLeft.png" alt="" srcset=""></button>
+                </div>
+              </div>
+            </nav>
+          </header>
+          <div class="purchase-major-guide">
+            <div class="close position-absolute bg-white"> <img src="assets/images/cross.png" alt="" srcset=""></div>
+            <div class="purchase-major-guide-content d-flex">
+              <div class="popup-img d-none d-lg-block"><img src="assets/images/purchase-major-guide-img.png" alt="" srcset=""></div>
+              <div class="popup-text"> <img src="assets/images/border-line-popup.png" alt="" srcset="">
+                <h6 class="popup-title">
+                   Visit the <span>Daleela Platform</span> to schedule a session with a career counselor.</h6>
+                <p>Browse available counselor profiles, select a suitable time slot that fits your schedule, and book your appointment</p><a class="d-block text-decoration-none btn-large text-white border-0" href="#">
+                   Proceed to purchase </a>
+              </div>
+            </div>
+          </div>
+          <div class="full-page-overlay d-none"></div>
+        </div>
+        <div class="hero-content"> <span>Welcome to Marshad </span>
+          <h1 class="hero-text">
+             Discover your ideal career path </h1>
+          <p>QCDC aims to help Qatar’s Youth to identify and fulfill their education and career goals. </p><a class="hero-btn" href="./questions.html">Get Started<img class="position-absolute" src="assets/images/icons/arrowLeft.png" alt="" srcset=""></a>
+        </div>
+        <div class="videoContent"><a class="d-flex flex-column gap-5 align-items-center arrowDown" id="scrollBtn" href="#" data-scroll-target="#howMarshadWorks"><img src="assets/images/arrowDown.png" alt="" srcset="">
+            <div class="line-arrow"> </div></a>
+          <div class="video-slider" id="heroVideo">
+            <video autoplay="autoplay" muted loop>
+              <source src="assets/images/hero-banner-video.mp4">
+            </video>
+          </div>
+        </div>
+      </section>
+      <div class="sections-wrapper position-relative">
+        <div class="social-links position-absolute"> 
+          <div class="social-links-content"><img src="assets/images/lineSocial.png" alt="" srcset=""><a class="social-site facebook" href=""> <img src="assets/images/icons/facebook.png" alt="" srcset=""></a><a class="social-site linkedin" href=""> <img src="assets/images/icons/linkedin.png" alt="" srcset=""></a><a class="social-site instagram" href=""><img src="assets/images/icons/instagram.png" alt="" srcset=""></a><a class="social-site twitter" href=""><img src="assets/images/icons/x-twitter.png" alt="" srcset=""></a><a class="social-site youtube" href=""> <img src="assets/images/icons/youtube.png" alt="" srcset=""></a></div>
+        </div>
+        <section class="steps"> 
+          <div class="container">
+            <h2 class="section-title">How <span>Marshad </span>works</h2>
+            <div class="steps-content d-flex flex-column flex-lg-row justify-content-center gap-3">
+              <div class="step-wrapper position-relative">
+                <div class="step position-relative"><img src="assets/images/Atlas-Arabi- Logo-Combo_Powered-by-Kuder_Stacked.png" alt="" srcset="">
+                  <div class="step-desc text-center">
+                    <h3>Specialization Program</h3>
+                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p><a class="mt-5 btn-large" href="./how-marshad-works.html">More Info</a>
+                  </div>
+                </div>
+                <div class="connector position-absolute"></div>
+              </div>
+              <div class="step-wrapper position-relative">
+                <div class="step position-relative"><img src="assets/images/Al-Dileela_logo_Color 2.png" alt="" srcset="">
+                  <div class="step-desc text-center">
+                    <h3>Dalilah System</h3>
+                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p><a class="mt-5 btn-large" href="./how-marshad-works.html">More Info</a>
+                  </div>
+                </div>
+                <div class="connector position-absolute"></div>
+              </div>
+              <div class="step-wrapper position-relative">
+                <div class="step position-relative"><img src="assets/images/career-village.png" alt="" srcset="">
+                  <div class="step-desc text-center">
+                    <h3>Job Shadowing Programs</h3>
+                    <p>Lorem Ipsum has been the industry's standard dummy text ever since the 1500s</p><a class="mt-5 btn-large" href="./how-marshad-works.html">More Info</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="career-stages">
+          <div class="stages-container">
+            <h2 class="section-title">Stages of career development</h2>
+            <div class="stages d-flex justify-content-center"> 
+              <div class="stage">
+                <h6>Stage </h6>
+                <div class="number">01</div>
+                <p class="title d-flex align-items-center gap-2"> <img src="assets/images/thinking.png" alt="" srcset="">Explore your needs</p>
+                <div class="description"> 
+                  <p>Helping students identify what they need and want in life and career.</p>
+                </div>
+              </div>
+              <div class="stage odd align-self-end">
+                <h6>Stage </h6>
+                <div class="number">02</div>
+                <p class="title d-flex align-items-center gap-2"> <img src="assets/images/research.png" alt="" srcset="">Explore your needs</p>
+                <div class="description"> 
+                  <p>Helping students identify what they need and want in life and career.</p>
+                </div>
+              </div>
+              <div class="stage">
+                <h6>Stage </h6>
+                <div class="number">03</div>
+                <p class="title d-flex align-items-center gap-2"><img src="assets/images/understand-opportunity.png" alt="" srcset="">Explore your needs</p>
+                <div class="description"> 
+                  <p>Helping students identify what they need and want in life and career.</p>
+                </div>
+              </div>
+              <div class="stage odd align-self-end">
+                <h6>Stage </h6>
+                <div class="number">04</div>
+                <p class="title d-flex align-items-center gap-2"><img src="assets/images/informed-decision.png" alt="" srcset="">Explore your needs</p>
+                <div class="description"> 
+                  <p>Helping students identify what they need and want in life and career.</p>
+                </div>
+              </div>
+              <div class="stage">
+                <h6>Stage </h6>
+                <div class="number">05</div>
+                <p class="title d-flex align-items-center gap-2"> <img src="assets/images/define-your-goal.png" alt="" srcset="">Explore your needs</p>
+                <div class="description"> 
+                  <p>Helping students identify what they need and want in life and career.</p>
+                </div>
+              </div>
+              <div class="stage-popup-wrapper">
+                <div class="cross position-absolute"> <img src="assets/images/cross.png" alt="" srcset=""></div><img src="assets/images/border-line-popup.png" alt="">
+                <div class="stage-popup"> 
+                  <h5>Explore your needs   </h5>
+                  <p>Helping students identify what they need and want in life and career.</p><a class="d-block btn-large w-100 text-white" href="#">More Info </a>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <section class="testimonial">
+          <h2 class="section-title">
+             What our students say</h2>
+          <div class="testimonial-content">
+            <div class="students d-flex flex-column">
+              <div class="student"><img src="assets/images/student-01-img.png" alt="" srcset="">
+                <div class="student-desc">
+                  <h6>Abdulla Al-mansoori</h6>
+                  <p>University Student</p>
+                </div>
+              </div>
+              <div class="waveline"></div>
+              <div class="student"> <img src="assets/images/student-02-img.png" alt="" srcset="">
+                <div class="student-desc">
+                  <h6>Abdulla Al-mansoori</h6>
+                  <p>University Student</p>
+                </div>
+              </div>
+              <div class="waveline"></div>
+              <div class="student"> <img src="assets/images/student-03-img.png" alt="" srcset="">
+                <div class="student-desc">
+                  <h6>Abdulla Al-mansoori</h6>
+                  <p>University Student</p>
+                </div>
+              </div>
+              <div class="waveline"></div>
+              <div class="student"> <img src="assets/images/student-04-img.png" alt="" srcset="">
+                <div class="student-desc">
+                  <h6>Abdulla Al-mansoori</h6>
+                  <p>University Student</p>
+                </div>
+              </div>
+            </div>
+            <div class="testimonial-slider">
+              <div class="testimonial-item">
+                <div class="video-thumnail position-relative"><img src="assets/images/thumbnail-img-000.png" alt="" srcset=""><a class="text-decoration-none thumbnail-label position-absolute" data-bs-toggle="modal" data-bs-target="#slideOnevideo">
+                    <div class="playCircle-wrapper">
+                      <div class="playCircle"> <img src="assets/images/thumbnail-play-icon.png" alt="" srcset=""></div>
+                    </div><span>PLAY VIDEO</span></a></div>
+                <div class="testimonial-text"><img class="mb-2" src="assets/images/comma.png" alt="" srcset="">
+                  <p>Marshad  has been an invaluable asset to my academic journey. The comprehensive resources, engaging study materials, and interactive features have significantly enhanced my learning experience. The platform's user-friendly interface and personalized learning plans have helped me stay organized and motivated.</p>
+                  <h4>Abdulla Al-mansoori</h4><span>University Student</span>
+                </div>
+              </div>
+              <div class="testimonial-item">
+                <div class="video-thumnail position-relative"><img src="assets/images/thumbnail-img-000.png" alt="" srcset=""><a class="text-decoration-none thumbnail-label position-absolute" href="#" data-bs-toggle="modal" data-bs-target="#slideTwovideo">
+                    <div class="playCircle-wrapper">
+                      <div class="playCircle"> <img src="assets/images/thumbnail-play-icon.png" alt="" srcset=""></div>
+                    </div><span>PLAY VIDEO </span></a></div>
+                <div class="testimonial-text"><img class="mb-2" src="assets/images/comma.png" alt="" srcset="">
+                  <p>Marshad  has been an invaluable asset to my academic journey. The comprehensive resources, engaging study materials, and interactive features have significantly enhanced my learning experience. The platform's user-friendly interface and personalized learning plans have helped me stay organized and motivated.</p>
+                  <h4>Abdulla Al-mansoori</h4><span>University Student</span>
+                </div>
+              </div>
+              <div class="testimonial-item">
+                <div class="video-thumnail position-relative"><img src="assets/images/thumbnail-img-000.png" alt="" srcset=""><a class="text-decoration-none thumbnail-label position-absolute" href="#" data-bs-toggle="modal" data-bs-target="#slideThreevideo">
+                    <div class="playCircle-wrapper">
+                      <div class="playCircle"> <img src="assets/images/thumbnail-play-icon.png" alt="" srcset=""></div>
+                    </div><span>PLAY VIDEO </span></a></div>
+                <div class="testimonial-text"><img class="mb-2" src="assets/images/comma.png" alt="" srcset="">
+                  <p>Marshad  has been an invaluable asset to my academic journey. The comprehensive resources, engaging study materials, and interactive features have significantly enhanced my learning experience. The platform's user-friendly interface and personalized learning plans have helped me stay organized and motivated.</p>
+                  <h4>Abdulla Al-mansoori</h4><span>University Student</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+        <div class="modal story-modal fade" id="slideOnevideo" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="slideOnevideo" aria-hidden="true">
+          <div class="modal-dialog modal-dialog-centered">
+            <div class="modal-content">
+              <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+              <div class="video-box-wrapper">
+                <div class="video-box">
+                  <div class="player" id="player">
+                    <video class="player_video viewer" autoplay="autoplay" loop>
+                      <source src="assets/images/hero-banner-video.mp4">
+                    </video>
+                  </div>
+                  <div class="player_controls">
+                    <div class="progress-range" title="Jump-to">
+                      <div class="progress-bar"></div>
+                    </div>
+                    <div class="left-controls"><span class="video-title">How to use O*NET</span></div>
+                    <div class="right-controls">
+                      <div class="time"><span class="time-elapsed">00:00 / </span><span class="time-duration">2:38</span></div>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <section class="partners"> 
+          <div class="container"> 
+            <div class="partners-title d-flex flex-column flex-lg-row row-gap-4 align-items-center justify-content-center">    <img src="assets/images/line.png" alt="" srcset="">
+              <h2 class="px-4">Partners for Success</h2><img src="assets/images/line.png" alt="" srcset="">
+            </div>
+            <div class="partners-subtitle"> 
+              <p class="text-center">Thanks to our exceptional partners, we have succeeded in overcoming challenges and achieving our shared goals.</p>
+            </div>
+          </div>
+          <div class="partners-logo-slider">
+            <div class="item"><img src="assets/images/logo-01.png" alt=""></div>
+            <div class="item"><img src="assets/images/logo-02.png" alt=""></div>
+            <div class="item"><img src="assets/images/logo-03.png" alt=""></div>
+            <div class="item"><img src="assets/images/logo-04.png" alt=""></div>
+            <div class="item"> <img src="assets/images/logo-05.png" alt=""></div>
+            <div class="item"><img src="assets/images/logo-04.png" alt=""></div>
+            <div class="item"> <img src="assets/images/logo-05.png" alt=""></div>
+          </div>
+        </section>
+        <section class="success-stories"> 
+          <div class="container">
+            <h2 class="section-title">
+               Success Stories</h2>
+            <div class="successStories"> 
+              <div class="story">
+                <div class="story-wrapper story-wrapper-01">
+                  <div class="story-single position-relative story-expanded story-01">
+                    <div class="text-desc">
+                      <p class="position-relative"><span>Marshad has been an invaluable asset to my academic journey. </span> The comprehensive resources, interesting course materials, and interactive features have greatly enhanced my learning experience </p>
+                      <h4>Abdulla Al-Mansoori </h4>
+                      <h5>Director</h5><a class="readmore-btn btn-large text-white" href="./success-story.html">
+                         Read More<img class="position-absolute" src="assets/images/icons/arrowLeft.png" alt="" srcset=""></a>
+                    </div><img class="position-absolute" src="assets/images/story-01-img.png" alt="" srcset="">
+                  </div>
+                  <div class="story-single position-relative story-02 story-collapse">
+                    <div class="text-desc">
+                      <p class="position-relative"><span>Marshad has been an invaluable asset to my academic journey. </span>The comprehensive resources, engaging study materials, and interactive features have significantly enhanced my learning experience. </p>
+                      <h4>Abdulla Al-Mansoori </h4>
+                      <h5>Director</h5><a class="readmore-btn btn-large text-white" href="./success-story.html">
+                         Read More<img class="position-absolute" src="assets/images/icons/arrowLeft.png" alt="" srcset=""></a>
+                    </div><img class="position-absolute" src="assets/images/story-03-img-02.png" alt="" srcset="">
+                  </div>
+                  <div class="story-single position-relative story-03 story-collapse">
+                    <div class="text-desc">
+                      <p class="position-relative"><span>Marshad has been an invaluable asset to my academic journey. </span>The comprehensive resources, engaging study materials, and interactive features have significantly enhanced my learning experience. </p>
+                      <h4>Abdulla Al-Mansoori </h4>
+                      <h5>Director</h5><a class="readmore-btn btn-large text-white" href="./success-story.html">
+                         Read More<img class="position-absolute" src="assets/images/icons/arrowLeft.png" alt="" srcset=""></a>
+                    </div><img class="position-absolute" src="assets/images/story-02-img-02.png" alt="" srcset="">
+                  </div>
+                </div>
+              </div>
+              <div class="story">
+                <div class="story-wrapper story-wrapper-02">
+                  <div class="story-single position-relative story-expanded story-01">
+                    <div class="text-desc">
+                      <p class="position-relative"><span>Marshad has been an invaluable asset to my academic journey. </span> The comprehensive resources, interesting course materials, and interactive features have greatly enhanced my learning experience </p>
+                      <h4>Abdulla Al-Mansoori </h4>
+                      <h5>Director</h5><a class="readmore-btn btn-large text-white" href="./success-story.html">
+                         Read More<img class="position-absolute" src="assets/images/icons/arrowLeft.png" alt="" srcset=""></a>
+                    </div><img class="position-absolute" src="assets/images/story-01-img.png" alt="" srcset="">
+                  </div>
+                  <div class="story-single position-relative story-02 story-collapse">
+                    <div class="text-desc">
+                      <p class="position-relative"><span>Marshad has been an invaluable asset to my academic journey. </span>The comprehensive resources, engaging study materials, and interactive features have significantly enhanced my learning experience. </p>
+                      <h4>Abdulla Al-Mansoori </h4>
+                      <h5>Director</h5><a class="readmore-btn btn-large text-white" href="./success-story.html">
+                          Read More<img class="position-absolute" src="assets/images/icons/arrowLeft.png" alt="" srcset=""></a>
+                    </div><img class="position-absolute" src="assets/images/story-03-img-02.png" alt="" srcset="">
+                  </div>
+                  <div class="story-single position-relative story-03 story-collapse">
+                    <div class="text-desc">
+                      <p class="position-relative"><span>Marshad has been an invaluable asset to my academic journey. </span>The comprehensive resources, engaging study materials, and interactive features have significantly enhanced my learning experience. </p>
+                      <h4>Abdulla Al-Mansoori </h4>
+                      <h5>Director</h5><a class="readmore-btn btn-large text-white" href="./success-story.html">
+                         Read More<img class="position-absolute" src="assets/images/icons/arrowLeft.png" alt="" srcset=""></a>
+                    </div><img class="position-absolute" src="assets/images/story-02-img-02.png" alt="" srcset="">
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </section>
+      </div>
+    </main>
+    <footer> 
+      <div class="container"> 
+        <div class="logo">  <img src="assets/images/marshad-logo.png" alt=""></div>
+        <div class="footer-nav d-flex flex-column flex-sm-row row-gap-3">
+          <div class="nav-links"><span>Explore </span>
+            <ul>   
+              <li> <a href="#">About us</a></li>
+              <li> <a href="#">For Students</a></li>
+              <li> <a href="#">Media Center</a></li>
+              <li> <a href="#">Contact us</a></li>
+            </ul>
+          </div>
+          <div class="nav-links"><span>Publications</span>
+            <ul> 
+              <li> <a href="#">Career Guide</a></li>
+              <li> <a href="#">Research Papers</a></li>
+              <li> <a href="#">Reports</a></li>
+              <li> <a href="#">Booklets</a></li>
+              <li> <a href="#">Handouts</a></li>
+            </ul>
+          </div>
+          <div class="nav-links"><span>Glossary </span>
+            <ul>
+              <li> <a href="#">About us</a></li>
+              <li> <a href="#">For Students</a></li>
+              <li> <a href="#">Media Center</a></li>
+              <li> <a href="#">Contact us</a></li>
+            </ul>
+          </div>
+        </div>
+        <div class="contact-info d-flex flex-column flex-md-row align-items-md-center justify-content-between row-gap-4"> 
+          <div class="socialLinks d-flex">   <a class="facebook" href="#"> <img src="assets/images/icons/facebook.png" alt="" srcset=""></a><a class="linkedin" href="#"> <img src="assets/images/icons/linkedin.png" alt="" srcset=""></a><a class="instagram" href="#"> <img src="assets/images/icons/instagram.png" alt="" srcset=""></a><a class="twitter" href="#"> <img src="assets/images/icons/x-twitter.png" alt="" srcset=""></a><a class="youtube" href="#"> <img src="assets/images/icons/youtube.png" alt="" srcset=""></a></div><a class="d-none d-md-block" href="#"><img src="assets/images/arrowUp.png" alt="" srcset=""></a>
+          <div class="numEmail d-flex align-items-center gap-4"> 
+            <div class="phoneNum d-flex gap-2"> <img src="assets/images/icons/phone-icon.svg" alt="" srcset=""><span>+974 44546815</span></div>
+            <div class="email d-flex align-items-center gap-2"> <img src="assets/images/icons/email-icon.svg" alt="" srcset=""><span>qcdc@qf.org.qa</span></div>
+          </div>
+        </div>
+        <div class="footer-footer d-flex flex-column flex-lg-row align-items-center justify-content-between row-gap-4"> 
+          <div class="textContent-copyright"> <a href="#">© Marshad Qatar Career Development Center © 2024</a></div>
+          <ul class="d-flex justify-content-center row-gap-2 flex-wrap list-unstyled m-0"> 
+            <li> <a href="#">Terms of Use </a></li>
+            <li> <a href="#">Cookie Policy</a></li>
+            <li> <a href="#">Privacy Policy </a></li>
+            <li> <a href="#">Accessibility </a></li>
+          </ul>
+        </div>
+      </div>
+    </footer>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="assets/js/videoplayer.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script type="importmap" defer>
+      {
+          "imports": {
+              "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js",
+              "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.esm.min.js"
+          }
+      }
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+  </body>
+</html>

@@ -1,0 +1,119 @@
+main.scholarship{
+    background-color: map-get($map: $color-map, $key: body-bg);
+    .scholarship-program-content{
+        min-height: 900px;
+        height:100%;
+        padding:18px 0 112px;
+        @include goBack;
+        .go-back{
+            padding-top: 0;
+            margin-inline-start:0px;
+        }
+        h1{
+            margin-top:20px;
+            font-family: var(--secondary-font);
+            font-weight: 700;
+            font-size:30px;
+        }
+        p{
+            font-weight: 500px;
+            line-height: 28px;
+            margin-bottom: 48px;
+        }
+
+        .nav{
+            max-width: 396px;
+            width: 100%;
+            border-inline-end: 1px solid map-get($map: $color-map, $key: box-border-color);
+            margin-inline-end: 1rem;
+
+            @media (max-width:1510px){
+                max-width: 230px;
+            }
+            @include media-breakpoint-down(md){
+                max-width:100%;
+                border-inline-end:0
+            }
+         }
+
+       
+        .nav-link{
+            color: map-get($map: $color-map, $key: black-90);
+        }
+        .nav-link.active{
+            color: map-get($map: $color-map, $key: white);
+            background-color: map-get($map: $color-map, $key: Maroon-90);
+            padding:14px 20px;
+            border-radius: 8px;
+        }
+        .tab-content{
+            width: 100%;
+
+            @include educationDepartmentsGrid;
+           
+            h2{
+                font-family: var(--secondary-font);
+                font-size: 26px;
+                font-weight: 600;
+                color: map-get($map: $color-map, $key:active-breadcrumb);
+            }
+            p{
+                margin-bottom:24px;
+            }
+        }
+    }
+   
+    
+
+}
+/* purgecss start ignore */
+main.amiri-scholarship{
+    .single-education-details{
+        h2{
+            color:map-get($map: $color-map, $key: black-70);
+            font-weight: 700;
+            font-size: 18px;
+            margin-bottom:24px;
+        }
+
+        .university-state-wrapper{
+            display: flex;
+            padding: 24px;
+            border-radius: 24px;
+            background-color: map-get($map: $color-map, $key: light-bg);
+            margin-top: 8px;
+
+            @include media-breakpoint-down(md){
+                padding:14px;
+            }
+
+            p{
+                margin: 0;
+                font-size:16px;
+                font-weight: 600;
+                color: map-get($map: $color-map, $key: black-70);
+                @include media-breakpoint-down(sm){
+                    font-size: 12px;
+                }
+                &:first-child{
+                    max-width: 756px;
+                    width: 100%;
+                }
+                &:nth-of-type(2){
+                    max-width: 556px;
+                    width: 100%;
+                }
+            }
+        }
+
+        .university-state-wrapper.thead{
+            background-color:map-get($map: $color-map, $key: bistre-10);
+            font-weight: 700;
+            line-height: 24px; 
+            p{
+                color: map-get($map: $color-map, $key: white);
+            }
+        }
+    }
+}
+/* purgecss end ignore */

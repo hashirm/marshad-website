@@ -1,0 +1,113 @@
+@include goBack;
+.go-back{
+    padding-top: 20px;
+    margin-inline-start:0px;
+    padding-bottom:20px;
+}
+.single-education-details{
+    min-height: 900px;
+    height:100%;
+    background-color: map-get($map: $color-map, $key: white);
+    padding:64px 64px;
+    border-radius: 24px;
+    margin-bottom:98px;
+
+    
+
+    @include media-breakpoint-down(lg){
+        padding:30px 30px;
+    }
+    @include media-breakpoint-down(sm){
+        padding:15px 15px;
+    }
+
+    > p {
+        font-weight: 500;
+        @include media-breakpoint-down(sm){
+            font-size: 16px;
+        }
+    }
+    .accordion{
+        .accordion-button{
+            background-color: map-get($map: $color-map, $key: bone-20);
+            padding:35px 32px;
+            font-weight: 600;
+            font-size:24px;
+            justify-content: space-between;
+            text-align: start !important;
+            &::after{
+                margin-left: unset !important;
+                margin-inline-start:auto;
+            }
+
+
+            @include media-breakpoint-down(sm){
+                font-size: 20px;
+            }
+        }
+        .accordion-item{
+            margin-bottom:15px;
+            border-radius: 16px;
+            overflow: hidden;
+            border: none;
+            
+            .accordion-body{
+                background-color: map-get($map: $color-map, $key: bone-20);
+                padding:0 32px 35px;
+                ul{
+                    li{
+                        color: map-get($map: $color-map, $key: black-grey);
+                    }
+                }
+            }
+        }
+        .accordion-button:focus {
+            box-shadow: none;
+        }
+        .accordion-button::after{
+         
+            background-position: center;
+            width: 42px;
+            height:42px;
+            background-size:17px;
+            background-color: white;
+            border-radius: 50%;
+        }
+        .accordion-button:not(.collapsed){
+            box-shadow: none;
+            color:map-get($map: $color-map, $key: black);
+            font-size:24px;
+            @include media-breakpoint-down(sm){
+                font-size: 20px;
+            }
+        }
+    }
+    
+}
+
+.single-education-title{
+    margin-bottom:20px;
+    row-gap: 15px;
+
+    h1{
+        font-family: var(--secondary-font);
+        font-size: 30px;
+        font-weight: 700;
+        margin-bottom:0;
+        color: map-get($map: $color-map, $key: active-breadcrumb);
+        @include media-breakpoint-down(sm){
+            font-size: 20px;
+        }
+    }
+    a{
+        background-color: map-get($map: $color-map, $key: bistre-10);
+        color: map-get($map: $color-map, $key: white);
+        text-decoration: none;
+        padding:18px 20px;
+        border-radius: 16px;
+
+        @include media-breakpoint-down(sm){
+            padding:12px 20px;
+        }
+    }
+}

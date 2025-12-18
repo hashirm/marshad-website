@@ -1,0 +1,263 @@
+main.department-description{
+    background-color: map-get($map: $color-map, $key: body-bg);
+
+    .department-details{
+
+        min-height: 900px;
+        height:100%;
+
+        > p{
+            font-weight: 500;
+        }
+        .employment-rate{
+            column-gap: 6px;
+            margin-bottom:30px;
+            > p {
+                margin-inline-end:22px;
+            }
+            p{
+                margin-bottom:0;
+            }
+            .gov-rate, .private-rate{
+                border: 1px solid map-get($map: $color-map, $key: search-box-border);
+                padding:4px 10px 4px;
+                width: 111px;
+                border-radius: 8px;
+                span{
+                    color: map-get($map: $color-map, $key: black-70);
+                    font-size: 22px;
+                    font-weight:700;
+                }
+                p{
+                    font-size: 11px;
+                    color: map-get($map: $color-map, $key: bistre);
+                }
+               
+            }
+
+        }
+
+        @include educationDepartmentsGrid;
+        .education-departments{
+            margin-bottom:30px;
+            .certificate-wrapper{
+                height: 164px;
+                padding:40px 44px;
+                text-decoration: none;
+                color: #333333;
+                img{
+                    z-index: 99;
+                    transition:filter 1000ms ease;
+                }
+                &::after{
+                    top:175px;
+                    border-radius: 50px;
+                    inset-inline-start: -70px;
+                }
+            }
+            
+        }
+        .certificate-wrapper{
+            &:hover{
+                img{
+                    filter:invert(1);
+                }
+                .certificate-text{
+                    color: map-get($map: $color-map, $key: white) !important;
+
+                }
+                &::after{
+                    width: 100% !important;
+                    height: 100% !important;
+                }
+                .certificate-detail-link{
+                    background-color: #f0e9e1 !important;
+                }
+            }
+        }
+
+        .exploreVideo{
+            .modal-content{
+                a.exploreMorebtn{
+                    inset-inline-end: 0;
+                    inset-block-end: -68px;
+                    display: inline-block;
+                    // position: relative;
+                    overflow: hidden;
+                    // padding:23px 39px;
+                    width: 220px;
+                    padding-top:14px;
+                    padding-bottom:14px;
+                    padding-inline-start:39px;
+                    padding-inline-end:39px;
+                    color: map-get($map: $color-map, $key: bistre-10);
+                    font-weight: 700;
+                    font-size: 15px;
+                    transition: all 500ms linear;
+            
+                    @include media-breakpoint-down(sm){
+                      padding-top:17px;
+                      padding-bottom:17px;
+                    }
+            
+                    &::before{
+                                content:"";
+                                position: absolute;
+                                display: block;
+                                width: 100px;
+                                height: 100px;
+                                top: -16px;
+                                inset-inline-start: -194px;
+                                background-color: map-get($map: $color-map, $key: mobilebtn-bg);
+                                border-radius: 50%;
+                                opacity: 100%;
+                                transition: all 300ms linear;
+            
+                            }
+            
+                            img{
+                                top: 17px;
+                                width: 17px;
+                                transform:rotate(180deg);
+                                inset-inline-end: -12px;
+                                opacity: 0%;
+                                transition:all 300ms linear;
+                                html[dir="rtl"] & {
+                                    transform: scaleX(1);
+                                }
+                            }
+            
+                            &:hover{
+            
+                                font-size: 14px;
+                                padding-inline-start:15px;
+                                padding-inline-end: 15px;
+                                width: 175px;
+            
+                                img{
+                                    inset-inline-end: 7px;
+                                    opacity: 100%;
+                                    @include media-breakpoint-down(lg){
+                                        inset-inline-end: 7px;
+                                    }
+                                }
+            
+                                &::before{
+                                    content:"";
+                                    display: block;
+                                    width: 325px;
+                                    height: 300px;
+                                    top: -57px;
+                                    inset-inline-start: -26px;
+                                    background-color:rgb(233 247 243);
+                                    opacity: 15%;
+                                }
+                            }
+            
+                    // img{
+                    //   transform: rotate(180deg);
+                    // }
+            
+                  }
+            }
+        }
+
+
+    }
+    
+}
+
+
+main.marketing-section{
+    background-color: map-get($map: $color-map, $key: body-bg);
+
+    .single-education-title{
+        h1{
+            margin-bottom:32px;
+            margin-top:18px;
+            font-weight: 600;
+        }
+        
+    }
+
+    .department-details{
+        min-height: 600px;
+        p{
+           
+            &:last-child{
+                padding-bottom: 28px;
+            }
+        }
+        @include media-breakpoint-down(md){
+            p{
+
+                font-size: 16px;
+            }
+        }
+    }
+
+    a.btn-large{
+        display: inline-block;
+        transition: all 500ms ease;
+        position: relative;
+        overflow: hidden;
+        border-radius: 16px;
+        width: 161px;
+        color: map-get($map: $color-map, $key: white);
+        padding:14px 29px;
+        font-size: 16px;
+        font-weight: 600;
+        img{
+            inset-inline-end: 25px;
+            opacity: 0;
+            top: 17px;
+            transform: rotate(180deg);
+            width: 16px;
+            transition: all .3s linear;
+        }
+
+        &::before{
+            background-color: #537d71;
+            border-radius: 50%;
+            content: "";
+            display: block;
+            height: 100px;
+            inset-inline-start: -194px;
+            opacity: 100%;
+            position: absolute;
+            top: -16px;
+            transition: all .3s linear;
+            width: 100px;
+        }
+
+        &:hover{
+            font-size: 14px;
+            padding-inline-start: 18px;
+            
+            img{
+                inset-inline-end: 14px;
+                 opacity: 100%;
+            }
+            &::before{
+                background-color: #e9f7f3;
+                content: "";
+                display: block;
+                height: 300px;
+                inset-inline-start: -26px;
+                opacity: 15%;
+                top: -57px;
+                width: 325px;
+            }
+        }
+       
+    }
+}
+
+main.degree-option{
+    .single-education-title{
+        h1{
+            margin-bottom:45px;
+        }
+        
+    }
+}

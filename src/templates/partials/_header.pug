@@ -1,0 +1,24 @@
+header  
+    nav.d-flex.justify-content-between.align-items-center.flex-column.flex-lg-row.nav-height
+        .logo.align-self-start.d-flex.justify-content-between.align-items-center.w-100
+            a(href="http://localhost:3000/") 
+                img(src="assets/images/marshad-logo.png" alt="logo")
+            .nav-icon.d-lg-none.d-block
+                img(src="assets/images/icons/mobile-nav.png", alt="", srcset="")
+
+        .header-content.d-flex.flex-column.align-items-center.flex-lg-row.row-gap-2 
+            .search 
+                form(action="")
+                    img(src="assets/images/search-icon.png", alt="")
+                    input(type="text" placeholder="What are you looking for?")
+            a.lang-switcher.text-decoration-none.d-flex.justify-content-start.align-items-center.gap-2.w-100(href="#") 
+                img(src="assets/images/icons/ar.png", alt="", srcset="")
+            a.lang-switcher.text-decoration-none.d-flex.justify-content-start.align-items-center.gap-2.d-none.w-100(href="#") 
+                //- img(src="assets/images/icons/ar.png", alt="", srcset="")
+                | EN 
+            .purchase-btn-wrapper
+                button.btn-large.border-0.text-white
+                    | Purchase Majors Guide
+                    img.position-absolute(src="assets/images/icons/arrowLeft.png", alt="", srcset="")
+include ../partials/modals/_purchase-major-guide-modal
+

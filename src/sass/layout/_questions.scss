@@ -1,0 +1,414 @@
+/* purgecss start ignore */
+
+.questions-page{
+
+    background-color: #F0E9E1;
+    background-image: url('../images/zigzap-question-line.png');
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    height: 100vh;
+
+form{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    row-gap: 20px;
+    position: relative;
+    overflow: hidden;
+
+.subjects-wrapper{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    
+    margin:113px auto 168px;
+ 
+    @include media-breakpoint-down(md){
+        margin-top: 50px;
+    }
+   
+        
+        input[type="submit"]{
+            text-align: center;
+            width: 100%;
+            max-width: 540px;
+            padding: 10px 0;
+            border-radius: 12px;
+            color: map-get($map: $color-map, $key: white);
+            background-color: map-get($map: $color-map, $key: bg-primary);
+            border: 0;
+            &:hover{
+                background-color: map-get($map: $color-map, $key: primary);
+            }
+        }
+        input.question-submit, a.question-submit{
+            max-width: 264px;
+            height: 48px;
+        }
+        label{
+            width: 100%;
+            max-width: 100%;
+            min-width: 100%;
+            display: inline-block;
+            cursor: pointer;
+            height: 62px;
+        }
+        label.second-step{
+            max-width: 100%;
+        }
+        input[type="radio"]{
+            appearance: none;
+        }
+        .radio-mark{
+            img{
+                margin-inline-end:10px;
+                width: 24px;
+                height: 24px;
+                object-fit: cover;
+            }
+        }
+        input[type="radio"]:checked + .radio-mark{
+            background-color: map-get($map: $color-map, $key: maroon-20);
+            border: 2px solid map-get($map: $color-map, $key: maroon-60);
+            color: map-get($map: $color-map, $key: bistre-100);
+            
+        }
+    }
+    h1{
+        max-width: 618px;
+        font-size: 28px;
+        text-align: center;
+        color: map-get($map: $color-map, $key: black-90);
+        margin-bottom: 46px;
+
+        @include media-breakpoint-down(md){
+            font-size: 22px;
+        }
+
+    }
+
+}
+
+/* purgecss end ignore */ 
+
+.btn-wrapper{
+    align-items: center;
+    justify-content: center;
+    column-gap: 12px;
+    .back-btn{
+        width: 100%;
+        text-align: center;
+        text-decoration: none;
+        color: black;
+        display: flex;
+        background-color: map-get($map: $color-map, $key: bone-10);
+        border: 2px solid map-get($map: $color-map, $key: bone);
+        padding:10px 0;
+        column-gap: 10px;
+        width: 100%;
+        max-width: 264px;
+        border-radius: 12px;
+        text-decoration: none;
+        justify-content: center;
+        color: map-get($map: $color-map, $key: black-90);
+        font-weight: bold;
+    }
+    a.submit-btn{
+        text-decoration: none;
+        width: 100%;
+        max-width: 264px;
+        padding:12px 0;
+        font-weight: bold;
+        text-align: center;
+        width: 100%;
+        max-width: 540px;
+        padding: 10px 0;
+        border-radius: 12px;
+        color: map-get($map: $color-map, $key: white);
+        background-color: map-get($map: $color-map, $key: bg-primary);
+        border: 0;
+        &:hover{
+            background-color: map-get($map: $color-map, $key: primary);
+        }
+    }
+
+} 
+}
+
+
+.question-steps-wrapper{
+    display: flex;
+    justify-content: center;
+    padding-top: 60px;
+}
+
+.question-wrapper{
+    position: relative;
+    overflow: hidden;
+}
+
+.question-steps{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    
+    .step{
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        width: 40px;
+        height: 40px;
+        border: 1px solid #fff;
+        border-radius: 50%;
+        background-color: #CFD6DC;
+        position: relative;
+
+        .step-inner-circle{
+            width: 20px;
+            height: 20px;
+            background-color: #fff;
+            border-radius: 50%;
+        }
+
+        @include media-breakpoint-down(sm){
+            width: 35px;
+            height: 35px;
+        }
+        
+    }
+    .step.in-progress{
+        border: 8px solid #537D71;
+    }
+    .step-gap-line{
+        display: inline-block;
+        width: 100%;
+        max-width: 542px;
+        background-color: #CFD6DC;
+        height: 3px;
+        @include media-breakpoint-down(xxl){
+            max-width: 380px;
+        }
+        @include media-breakpoint-down(lg){
+            max-width: 250px;
+        }
+        @include media-breakpoint-down(md){
+            max-width: 200px;
+        }
+        @include media-breakpoint-down(sm){
+            max-width: 120px;
+        }
+    }
+    .step.completed{
+        border: 0;
+        background-color: #537D71;
+        &::before{
+            content:"";
+            position: absolute;
+            background: url("../images/icons/white-tick.png");
+            height: 12px;
+            width: 14px;
+            top:13px;
+            inset-inline-start: 12px;
+            @include media-breakpoint-down(sm){
+                top:11px;
+                inset-inline-start: 10px;
+            }
+        }
+    }
+    .step-gap-line.filled{
+        &::before{
+            content: '';
+            position: absolute;
+            display: inline-block;
+            width: 100%;
+            max-width: 542px;
+            background-color: #537D71;
+            height: 3px;
+            transition: all 500ms ease;
+
+            @include media-breakpoint-down(xxl){
+                max-width: 380px;
+            }
+            @include media-breakpoint-down(lg){
+                max-width: 250px;
+            }
+            @include media-breakpoint-down(md){
+                max-width: 200px;
+            }
+            @include media-breakpoint-down(sm){
+                max-width: 120px;
+            }
+        }
+    }
+    
+}
+
+.subjects{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    justify-content: center;
+    gap: 8px;
+    align-items: stretch;
+    max-width: 100%;
+    width: 100%;
+    margin-bottom: 50px;
+    @include media-breakpoint-down(md){
+        justify-content: center;
+        grid-template-columns: 1fr;
+    }
+    .subject{
+        display: inline-block;
+        background-color: map-get($map: $color-map, $key: bone-10);
+        border: 2px solid map-get($map: $color-map, $key: header-search-border);
+        padding:16px 10px;
+        column-gap: 10px;
+        max-width: 100%;
+        min-width: 305px;
+        width: 100%;
+        border-radius: 12px;
+        text-decoration: none;
+        color: map-get($map: $color-map, $key: black-90);
+        @include media-breakpoint-down(md){
+            max-width: 100%;
+        }
+    }
+
+    .second-step{
+        width: 100%;
+        max-width: 100%;
+
+    }
+    
+    .subject.active, label.active{
+        background-color: map-get($map: $color-map, $key: maroon-20);
+        border: 2px solid map-get($map: $color-map, $key: maroon-60);
+        color: map-get($map: $color-map, $key: bistre-100);
+    }
+  
+
+}
+
+.subjects.next-step-subjects{
+    grid-template-columns: 100%;
+}
+
+/* purgecss start ignore */ 
+.questions-page{
+
+    .stage-popup-wrapper{
+        top: 110px;
+        padding:50px 90px;
+        padding-bottom:10px;
+        @include media-breakpoint-down(md){
+            top: 25px;
+            padding:50px 25px;
+            padding-bottom: 0px;
+        }
+        @include media-breakpoint-down(sm){
+            top: 25px;
+            padding-bottom:0px;
+        }
+    }
+
+    .showPopup{
+        inset-inline-end: 347px !important;
+    @include media-breakpoint-down(xxl){
+        inset-inline-end: 257px !important;
+    }
+    @include media-breakpoint-down(xl){
+        inset-inline-end: 167px !important;
+    }
+    @include media-breakpoint-down(lg){
+        inset-inline-end: 47px !important;
+    }
+    @include media-breakpoint-down(md){
+        inset-inline-end: 0px !important;
+    }
+    }
+
+
+
+    /* Make modal full height and fixed to the right */
+
+.modal-dialog-slide {
+    position: fixed;
+    right: 0;
+    margin: 0;
+    height: 100%;
+    transform: translateX(100%);
+    transition: transform 0.3s ease-in-out;
+    width: 100%;
+    max-width: 598px;
+  }
+  .modal-content{
+    border-radius: 30px;
+    .modal-body{
+        padding:40px 70px;
+
+        @include media-breakpoint-down(md){
+            padding:20px 15px;
+        }
+    }
+  }
+  
+  .modal.fade.slide-right .modal-dialog-slide {
+    transform: translateX(100%);
+  }
+  
+  .modal.fade.slide-right.show .modal-dialog-slide {
+    
+    
+    transform: translateX(-112%);
+
+    @media (max-width:1800px){
+        transform: translateX(-99%);
+    }
+
+    @media (max-width:1700px){
+        transform: translateX(-91%);
+    }
+
+    @include media-breakpoint-down(xxl){
+        transform: translateX(-66%);
+    }
+    @include media-breakpoint-down(xl){
+        transform: translateX(-40%);
+    }
+    @include media-breakpoint-down(lg){
+        transform: translateX(-20%);
+    }
+    @include media-breakpoint-down(md){
+        transform: translateX(0%);
+    }
+  }
+
+  .modal-dialog-scrollable .modal-content{
+    overflow: visible;
+  }
+
+  .btn-close{
+    opacity: 100%;
+    border-radius: 50%;
+    position: absolute;
+    width: 30px;
+    height: 28px;
+    top: -56px;
+    right: -62px;
+    background: white;
+    z-index: 99999;
+
+    @include media-breakpoint-down(md){
+        top: 0;
+        right: 0;
+        }
+    
+    img{
+        margin-bottom:2px;
+    }
+    }
+}
+
+
+
+/* purgecss end ignore */

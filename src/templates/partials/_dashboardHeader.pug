@@ -1,0 +1,29 @@
+header.header-dashboard
+  .header-content-wrapper
+    .header-content.d-flex.justify-content-between.align-items-center
+      .logo-image
+        img(src="assets/images/marshad-dashboard-logo.png" alt='' srcset='')
+      .search-form-buttons.d-flex
+        .searchInput
+          form(action='')
+            fieldset.position-relative.d-flex.justify-content-end
+              .search-icon.position-absolute.d-flex.align-items-center.justify-content-center
+                img(src="assets/images/dashboard-search-icon.png" alt='' srcset='')
+              input#searchInput.form-control.d-none.d-xl-block(type='text' name='' placeholder='What are you looking for?')
+        .lang-switcher-signup.d-flex
+            a.lang.text-decoration-none(type='button' href='') 
+                img(src="assets/images/dashboard-ar.png", alt="", srcset="")
+                //- | العربية  
+            a.d-none.d-lg-block.text-decoration-none.lang.text-nowrap.purchase-btn-wrapper(href='#')
+                | Purchase Majors Guide
+            a.text-decoration-none.signIn.text-white.text-nowrap(data-bs-target='#signInmodal' data-bs-toggle='modal' href='#')
+                | Sign In
+    a.mobile-link.d-block.d-lg-none.text-end.purchase-btn-wrapper(href="javascript:void(0)") Purchase Majors Guide
+.full-page-overlay.d-none
+
+include ../partials/modals/_sign-up-modal
+include ../partials/modals/_sign-in-modal   
+include ../partials/modals/_purchase-major-guide-modal
+include ../partials/modals/_dashboard-search-modal
+
+

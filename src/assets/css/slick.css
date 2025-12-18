@@ -1,0 +1,13 @@
+
+
+  .marketing-slider .slick-list .slick-track{
+    display: flex !important;
+    align-items: stretch !important;
+  }
+  
+  .marketing-slider .marketing-item{
+    height: auto;
+  }
+  .marketing-slider .marketing-item .marketing-slider-content-wrapper{
+    height: 100%;
+  }

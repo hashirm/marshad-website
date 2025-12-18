@@ -1,0 +1,28 @@
+main.dashboard-search{
+    background-color: map-get($map: $color-map, $key:body-bg);
+
+    .search-page-content{
+        margin-bottom: 48px;
+        .search-form{
+            label{
+                margin-bottom:34px;
+                @include media-breakpoint-down(md){
+                    margin-bottom: 14px;
+                }
+            }
+            .searchTextBox{
+                max-width: 979px;
+            }
+            .fieldset-wrapper{
+                column-gap: 20px;
+                row-gap: 40px;
+                @include media-breakpoint-down(md){
+                    row-gap: 20px;
+                }
+            }
+        }
+        .search-result{
+            padding:14px 0 45px;
+        }
+    }
+}

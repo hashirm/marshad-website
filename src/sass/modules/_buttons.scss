@@ -1,0 +1,11 @@
+
+
+.btn-large{
+    @include btn(12px 37px, 19px, 18px, #8A1538);
+    
+}
+
+
+.hero-btn{
+    @include btn(16px 30px, 16px, 16px, map-get($map: $color-map, $key: primary))
+}

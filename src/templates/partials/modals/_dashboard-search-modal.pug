@@ -1,0 +1,25 @@
+.search-box
+    a.cross-searchBox(href="#")
+        img(src="assets/images/cross.png", alt="", srcset="")
+    .container 
+        h3.searh-box-title What are you searching for?
+        form
+            fieldset
+                .search-textBox-wrapper.position-relative 
+                    img.position-absolute(src="assets/images/CGB-Settings.png", alt="", srcset="")
+                    input.form-control.search-textBox(type="search" placeholder="Job title or skills" id="search-input")
+                input.mt-3.mt-md-0.search-btn(type="submit", value="Search")
+        h4 Recent searches
+        .recent-searches 
+            .recent-search-item
+                a.university(href="recentsearch").active Qatar University
+                a.text-decoration-none(href="cross") 
+                    img(src="assets/images/active-cross.png", alt="", srcset="")
+            .recent-search-item 
+                a.university(href="#") Hamad Bin Khalifa University
+                a.text-decoration-none(href="cross") 
+                    img(src="assets/images/cross-search-recent.png", alt="", srcset="")
+            .recent-search-item 
+                a.university(href="#") Weill Cornell Medicine university in Qatar
+                a.text-decoration-none(href="cross") 
+                    img(src="assets/images/cross-search-recent.png", alt="", srcset="") 

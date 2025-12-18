@@ -1,0 +1,95 @@
+.page-content-wrapper{
+    column-gap: 72px;
+    @include goBack;
+
+    .search-page-content{
+        width: 100%;
+    }
+}
+
+
+.search-form{
+    padding:75px 0 50px;
+    @include media-breakpoint-down(sm){
+        padding:15px 0;
+    }
+    form{
+        label{
+            font-family:var(--secondary-font);
+            font-weight: 700;
+            color:rgba(150, 44, 76, 1);
+            font-size:32px;
+            @include media-breakpoint-down(sm){
+                font-size: 24px;
+                margin-bottom: 12px;
+            }
+        }
+
+        .fieldset-wrapper{
+            width: 100%;
+        }
+        .searchTextBox{
+            position:relative;
+            max-width: 580px;
+            width: 100%;
+            img{
+                position: absolute;
+                top:12px;
+                inset-inline-start: 7px;
+            }
+            .search-text{
+                padding-top:12px;
+                padding-inline-end:16px;
+                padding-bottom:12px;
+                padding-inline-start:45px;
+                border:1px solid map-get($map: $color-map, $key: search-box-page-border);
+                border-radius: 100px;
+               
+            }
+            
+        }
+        .search-submit.btn-large{
+            border-radius: 100px;
+            padding:14px 58px;
+        }
+    }
+}
+
+main{
+    .search-result{
+        padding:100px 0 140px;
+        @include media-breakpoint-down(sm){
+            padding:20px 0 80px;
+        }
+        .num-result{
+            color: map-get($map: $color-map, $key: active-breadcrumb);
+        }
+        .search-keyword{
+            color: map-get($map: $color-map, $key: search-keyword-color);
+        }
+        .search-result-content{
+            padding:17px 0;
+            border-bottom:1px solid map-get($map: $color-map, $key: search-box-border);
+            &:last-child{
+                border-bottom: 0;
+            }
+            
+            h1{
+                font-family:var(--secondary-font);
+                font-size:18px;
+                font-weight:600;
+                color: map-get($map: $color-map, $key: black);
+                opacity: 80%;
+            }
+            p{
+                font-size: 16px;
+                line-height: 25px;
+                margin-bottom: 0;
+            }
+        }
+        @include pagination-indexes;
+    }
+}
+
+
+

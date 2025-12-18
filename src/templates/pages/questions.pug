@@ -1,0 +1,136 @@
+doctype html
+html(dir="ltr" lang="en")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="")
+        meta(name="keywords" content="")
+        meta(property="og:title" content="")
+        meta(property="og:description" content="")
+        link(rel="icon" href="assets/images/favicon.ico" type="image/x-icon")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        link(rel="stylesheet", href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css")
+
+        noscript
+            link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap")
+
+        //- link(rel="stylesheet", href="assets/_css/app.css" media="print" onload="this.onload=null;this.removeAttribute('media');")
+        link(rel="stylesheet", href="assets/css/app.min.css" media="print" onload="this.onload=null;this.removeAttribute('media');")
+        noscript
+            //- link(rel="stylesheet", href="assets/_css/app.css")
+            link(rel="stylesheet", href="assets/css/app.min.css")
+            
+        title How Marshad Works
+    body
+        //- include ../partials/_header
+        //- .breadcrum-wrapper
+        //-     nav.container.breadcrumb-nav(aria-label='breadcrumb')
+        //-         ol.breadcrumb
+        //-             li.breadcrumb-item
+        //-                 a(href='#') Home
+        //-             li.breadcrumb-item.active(aria-current='page') Questions
+        main.questions-page
+           .container
+                .question-steps-wrapper
+                    .question-steps 
+                        .step.completed
+                        .step-gap-line.filled 
+                        .step
+                            .step-inner-circle 
+                        .step-gap-line 
+                        .step
+                            .step-inner-circle  
+                
+                form(action="")
+                    .subjects-wrapper 
+                        h1 What you are academic interest and curiosity that spark your interest?
+                        .subjects.animate__animated.animate__slideInLeft
+                            label
+                                input(type="radio" name="option" checked)
+                                span.radio-mark.subject 
+                                    img(src="assets/images/icons/science-icon.png", alt="", srcset="") 
+                                    | Science
+                            label
+                                input(type="radio" name="option")
+                                span.radio-mark.subject
+                                    img(src="assets/images/icons/business-icon.png", alt="", srcset="") 
+                                    | Business
+                            label
+                                input(type="radio" name="option")
+                                span.radio-mark.subject
+                                    img(src="assets/images/icons/business-icon.png", alt="", srcset="") 
+                                    | Business
+                            label
+                                input(type="radio" name="option")
+                                span.radio-mark.subject
+                                    img(src="assets/images/icons/business-icon.png", alt="", srcset="") 
+                                    | Business
+                            label
+                                input(type="radio" name="option")
+                                span.radio-mark.subject
+                                    img(src="assets/images/icons/business-icon.png", alt="", srcset="") 
+                                    | Business
+                            label
+                                input(type="radio" name="option")
+                                span.radio-mark.subject
+                                    img(src="assets/images/icons/business-icon.png", alt="", srcset="") 
+                                    | Business
+                            label
+                                input(type="radio" name="option")
+                                span.radio-mark.subject
+                                    img(src="assets/images/icons/business-icon.png", alt="", srcset="") 
+                                    | Business
+                            label
+                                input(type="radio" name="option")
+                                span.radio-mark.subject
+                                    img(src="assets/images/icons/business-icon.png", alt="", srcset="") 
+                                    | Business
+                            label
+                                input(type="radio" name="option")
+                                span.radio-mark.subject
+                                    img(src="assets/images/icons/business-icon.png", alt="", srcset="") 
+                                    | Business
+                           
+                            //- a.subject.active(href="javascript:void(0)")
+                            //-     img(src="assets/images/icons/science-icon.png", alt="", srcset="") 
+                            //-     | Science
+                            //- a.subject(href="javascript:void(0)")
+                            //-     img(src="assets/images/icons/business-icon.png", alt="", srcset="") 
+                            //-     | Business
+                            //- a.subject(href="javascript:void(0)")
+                            //-     img(src="assets/images/icons/innovation-icon.png", alt="", srcset="") 
+                            //-     | Technology
+                            //- a.subject(href="javascript:void(0)")
+                            //-     img(src="assets/images/icons/business-icon.png", alt="", srcset="") 
+                            //-     | Technology
+                            //- a.subject(href="javascript:void(0)")
+                            //-     img(src="assets/images/icons/literature-subject.png", alt="", srcset="") 
+                            //-     | Literature
+                            //- a.subject(href="javascript:void(0)")
+                            //-     img(src="assets/images/icons/literature-subject.png", alt="", srcset="") 
+                            //-     | Literature
+                            //- a.subject(href="javascript:void(0)")
+                            //-     img(src="assets/images/icons/arts-icon.png", alt="", srcset="") 
+                            //-     | Arts and Design
+                            //- a.subject(href="javascript:void(0)")
+                            //-     img(src="assets/images/icons/arts-icon.png", alt="", srcset="") 
+                            //-     | Arts and Design
+                        input(type="submit" value="Next")
+        //- include ../partials/_footer
+           
+        script(src='https://code.jquery.com/jquery-3.6.0.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js')
+        script(src='') 
+        script(src="assets/js/header.js")
+        script(src="assets/js/questions.js") 
+        script(src="assets/js/home.js")
+        //- script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js')
+
+        script(async, src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js", crossorigin="anonymous")
+     
+            //- new Popover(document.getElementById('popoverButton'))

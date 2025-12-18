@@ -1,0 +1,59 @@
+.filter-box.position-absolute   
+    h4 FILTERS
+    .filter-box-content
+        p What are your academic interests or fields that spark your curiosity? 
+        form(action="")
+            .form-content.d-flex.gap-2.flex-wrap
+                .checkboxes-wrapper
+                    label.position-relative(for="technology") 
+                        input#technology(type="checkbox", name="technology") 
+                        | Technology
+                .checkboxes-wrapper
+                    label.position-relative(for="literature") 
+                        input#literature(type="checkbox", name="literature") 
+                        | Literature
+                .checkboxes-wrapper
+                    label.position-relative(for="business") 
+                        input#business(type="checkbox", name="business") 
+                        | Business
+                .checkboxes-wrapper
+                    label.position-relative(for="arts") 
+                        input#arts(type="checkbox", name="arts") 
+                        | Arts
+                .checkboxes-wrapper
+                    label.position-relative(for="science") 
+                        input#science(type="checkbox", name="science") 
+                        | Science
+    .filter-box-content
+        p Do you prefer working in an office environment or in the field?  
+        form(action="")
+            .form-content.d-flex.gap-2.flex-wrap
+                .checkboxes-wrapper
+                    label.position-relative(for="office") 
+                        input#office(type="checkbox", name="office") 
+                        | Office
+                .checkboxes-wrapper
+                    label.position-relative(for="field") 
+                        input#field(type="checkbox", name="field") 
+                        | Field
+                .checkboxes-wrapper
+                    label.position-relative(for="both") 
+                        input#both(type="checkbox", name="both") 
+                        | Both
+                
+    .filter-box-content
+        p Are you interested in studying in Qatar or abroad? 
+        form(action="")
+            .form-content.d-flex.gap-2.flex-wrap
+                .checkboxes-wrapper
+                    label.position-relative(for="qatar") 
+                        input#qatar(type="checkbox", name="qatar") 
+                        | Qatar
+                .checkboxes-wrapper
+                    label.position-relative(for="abroad") 
+                        input#abroad(type="checkbox", name="abroad") 
+                        | Abroad
+                .checkboxes-wrapper
+                    label.position-relative(for="studyboth") 
+                        input#studyboth(type="checkbox", name="studyboth") 
+                        | Both 

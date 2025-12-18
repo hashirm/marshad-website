@@ -1,0 +1,23 @@
+.dashboard-header-modal
+    #signInmodal.modal.fade(aria-hidden='true' aria-labelledby='signInmodalLabel' tabindex='-1')
+        .modal-dialog.modal-dialog-centered
+            .modal-content
+                button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                .modal-body
+                    .modal-body-content-wrapper.d-flex 
+                        .img-content 
+                            img(src="assets/images/men-women.png", alt="", srcset="")
+                        .form-content.w-100 
+                            h2 Login 
+                            p Enter the following details 
+                            form(action="#")
+                                label(for="") Email
+                                input(type="email" class="form-control" placeholder="Email" required)
+                                label(for="") Password
+                                .password-field.position-relative 
+                                    img.eye-icon.position-absolute(src="assets/images/eye-01.png", alt="", srcset="") 
+                                    input.password-textBox(type="password" class="form-control" placeholder="Password" required) 
+                                input(type="submit" value="Login" class="btn-large text-white d-block w-100")
+                                p.signup-message.text-center 
+                                    | Don't have an account?
+                                    a(href="#" class="ms-1 text-bold" data-bs-target="#signUpmodal" data-bs-toggle='modal') Sign up!

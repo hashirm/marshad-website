@@ -1,0 +1,118 @@
+.breadcrum-wrapper{
+    border-bottom: 1px solid rgba(0, 0, 0, 0.1);
+    margin-bottom:8px;
+    .breadcrumb-nav{
+        padding-top:20px;
+        padding-bottom:20px;
+        .breadcrumb{
+            margin-bottom:0;
+            a{
+                color:rgba(0, 0, 0, 1);
+                font-weight: 600;
+                text-decoration: none;
+               
+            }
+            .breadcrumb-item + .breadcrumb-item::before{
+                float: inline-start;
+                padding-inline-end: var(--bs-breadcrumb-item-padding-x);
+                // padding-right: 0;
+                color: var(--bs-breadcrumb-divider-color);
+                content: var(--bs-breadcrumb-divider, "\f105") /* rtl: var(--bs-breadcrumb-divider, "/") */;
+
+                font-family: "Font Awesome 6 Free";
+                font-weight:900;
+                font-size:16px;
+                vertical-align:bottom;
+                margin-top:3px;
+                html[dir="rtl"] & {
+                    padding-right: 0;
+                    content: var(--bs-breadcrumb-divider, "\f104") /* rtl: var(--bs-breadcrumb-divider, "/") */;
+                }
+            }
+            .breadcrumb-item.active {
+                color:map-get($map: $color-map, $key: active-breadcrumb);
+                font-weight: 700;
+            }
+            .breadcrumb-item + .breadcrumb-item{
+                padding-inline-start:0.5rem;
+                html[dir="rtl"] & {
+                    
+                    padding-left: 0;
+                }
+            }
+        }
+
+    }
+    
+}
+
+/* purgecss start ignore */ 
+
+.showPopup{
+    inset-inline-end: 660px !important;
+@include media-breakpoint-down(xxl){
+    inset-inline-end: 300px !important;
+}
+@include media-breakpoint-down(lg){
+    inset-inline-end: 100px !important;
+}
+@include media-breakpoint-down(md){
+    inset-inline-end: 0px !important;
+}
+}
+
+/* purgecss end ignore */
+
+.stage-popup-wrapper{
+    .cross{
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 50%;
+        background-color:map-get($map: $color-map, $key: white);
+        width: 40px;
+        height: 40px;
+        top: -26px;
+        inset-inline-end: -48px;
+        cursor: pointer;
+
+        @include media-breakpoint-down(md){
+            top:7px;
+            inset-inline-end: 7px;
+        }
+
+    }
+    padding:50px 70px;
+    max-width: 598px;
+    position: absolute;
+    z-index: 9999;
+    border-radius: 35px;
+    top:217px;
+    transition: inset-inline-end 200ms linear;
+    inset-inline-end: -660px;
+    background-color:map-get($map: $color-map, $key: white);
+
+ @include media-breakpoint-down(sm){
+    padding: 50px 25px;
+ }
+
+}
+.stage-popup{
+   text-align: center;
+  
+   h5{
+        font-family: var(--secondary-font);
+        font-size: 30px;
+        color: map-get($map: $color-map, $key:Maroon-90);
+        margin-top:32px;
+        margin-bottom:20px;
+   }
+   p{
+        margin-bottom: 32px;
+        font-size: 16px;
+        color: map-get($map: $color-map, $key: black-80);
+    }
+   a{
+    text-decoration: none;
+   }
+}

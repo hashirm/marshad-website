@@ -1,0 +1,109 @@
+footer{
+    background: linear-gradient(120.04deg, #1A1A1A 31.68%, #333333 125.23%);
+    border-radius:40px 40px 0 0;
+    padding:100px 0px 25px;
+    position: relative;
+    margin-top:-60px;
+    z-index: 999;
+    @include media-breakpoint-down(sm){
+        padding:55px 0 0;
+    }
+    .logo{
+        margin-bottom:45px;
+    }
+    .contact-info{
+        color: map-get($map: $color-map, $key: white);
+        margin-bottom:16px;
+        direction: ltr;
+        .socialLinks{
+
+            a{
+                display:flex;
+                align-items: center;
+                justify-content: center;
+                width: 38px;
+                height: 38px;
+                border-radius: 50%;
+                background-color: map-get($map: $color-map, $key: socialIcon-bg);
+               
+            }
+
+        }
+    }
+    .footer-nav{
+        margin-bottom:45px;
+        .nav-links{
+            &:first-child{
+                padding-inline-start: 0;
+            }
+            span{
+                color:map-get($map: $color-map, $key: white);
+                margin-bottom:20px;
+            }
+            padding-inline-start:60px;
+            @include media-breakpoint-down(sm){
+                padding-inline-start:0px;
+            }
+            ul{
+                li{
+                    a{
+                        @include media-breakpoint-down(sm){
+                            font-size: 16px;
+                        }
+                    }
+                }
+            }
+        }
+        ul{
+            padding-inline-start: 0;
+            margin-top:16px;
+            margin-bottom: 0;
+            color: map-get($map: $color-map, $key: white);
+            @include media-breakpoint-down(sm){
+                font-size: 16px;
+            }
+            
+            li{
+
+                a{
+                    text-decoration: none;
+                    color: map-get($map: $color-map, $key: white);
+                }
+                list-style: none;
+
+               
+            }
+        }
+    }
+}
+
+footer{
+    .socialLinks{
+        column-gap: 7px;
+    }
+    .contact-info{
+        padding:27px 0;
+        border-top:0.5px solid #F6F2ED80;
+        border-bottom:0.5px solid #F6F2ED80;
+        row-gap: 20px;
+
+        .numEmail{
+            .phoneNum{
+                span{
+                    @include media-breakpoint-down(sm){
+                        font-size: 16px;
+                        white-space: nowrap;
+                    }
+                }   
+            }
+        }
+    }
+   @include footer-footer;
+   .footer-footer{
+        border-top:0px;
+        padding-top: 12px;
+        a{
+            color: map-get($map: $color-map, $key: black-40) !important;
+        }
+   }
+}

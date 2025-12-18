@@ -1,0 +1,287 @@
+
+@mixin btn($padding, $borderRadius, $fontSize, $bgColor){
+    padding:$padding;
+    border-radius:$borderRadius;
+    font-size: $fontSize;
+    background-color: $bgColor;
+
+    &:hover{
+        background-color: darken($bgColor, 10%);
+    }
+}
+
+@mixin goBack{
+    .go-back{
+        max-width: 75px;
+        width: 100%;
+        padding-top:30px;
+        margin-inline-start: -41px;
+        img{
+            html[dir="rtl"] & {
+                transform:scaleX(-1);
+            }
+        }
+        @include media-breakpoint-down(md){
+            margin-inline-start: 0px;
+            padding-top:10px;
+            padding-bottom:10px;
+        }
+        a{
+            font-family: var(--secondary-font);
+            text-decoration: none;
+            font-size: 13px;
+            font-weight: 600;
+            color: map-get($map: $color-map, $key: black-50);
+        }
+    }
+}
+
+@mixin pagination-indexes{
+    .result-pagination-index-wrapper{
+        padding:24px 0;
+
+        .pagination-index{
+            font-family: var(--secondary-font);
+            width: 41px;
+            height: 41px;
+            border-radius: 50%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            border: 1px solid map-get($map: $color-map, $key: search-box-border);
+            text-decoration: none;
+            color: map-get($map: $color-map, $key: pagination-index-color);
+            @include media-breakpoint-down(sm){
+                width:31px;
+                height: 31px;
+            }
+            i{
+                font-size:14px;
+                @include media-breakpoint-down(sm){
+                    font-size: 13px;
+                }
+            }
+            .fa-ellipsis{
+                font-size: 18px;
+
+            }
+            &:hover{
+            border: 0;
+            background-color: map-get($map: $color-map, $key: bg-primary);
+            color:map-get($map: $color-map, $key: white);
+            }
+            @include media-breakpoint-down(sm){
+                font-size: 14px;
+            }
+
+
+            html[dir="rtl"] & {
+                .fa-angle-double-left:before, .fa-angles-left:before {
+                    content: "\f101";
+                }
+                .fa-angle-left:before{
+                    content:'\f105';
+                } 
+                .fa-angle-double-right:before, .fa-angles-right:before {
+                    content: "\f100";
+                }
+                .fa-angle-right:before{
+                    content:'\f104';
+                } 
+
+            }
+
+           
+
+
+        }
+        .dots{
+            align-items: end;
+            border:none;
+        }
+        .pagination-index.active{
+            border: 0;
+            background-color: map-get($map: $color-map, $key: bg-primary);
+            color:map-get($map: $color-map, $key: white);
+
+        }
+    } 
+}
+
+@mixin footer-footer{
+    .footer-footer{
+
+        .textContent-copyright{
+            @include media-breakpoint-down(sm){
+                text-align: center;
+            }
+            a{
+                color: map-get($map: $color-map, $key: black-40);
+                text-decoration: none;
+            }
+        }
+        ul{
+            column-gap: 15px;
+            a{
+                color: map-get($map: $color-map, $key: black-40);
+                text-decoration: none;
+               
+            }
+        }
+    }
+}
+
+@mixin sliderDots($activeDotColor, $inactiveDotColor){
+    .slick-dots{
+        display: flex;
+        width:100px;
+        bottom:-72px;
+        // margin:0 80px;
+        z-index: 888;
+    }
+    .slick-dots li{
+       width:auto;
+       margin:0 2px;
+    }
+
+    .slick-dots li button{
+        min-width: 21px;
+    }
+
+    .slick-dots li button:before{
+        content:"";
+        width:100%;
+        height:6px;
+        border-radius: 5px;
+        background-color: map-get($map: $color-map, $key: $inactiveDotColor);
+    }
+
+    .slick-dots li.slick-active{
+        flex-grow: 1;
+
+    }
+
+    .slick-dots li.slick-active button:before{
+        content:"";
+        width:100%;
+        height:6px;
+        border-radius: 5px;
+        background-color: map-get($map: $color-map, $key: $activeDotColor);
+    }
+}
+
+
+@mixin educationDepartmentsGrid{
+
+
+    .education-departments{
+        display: grid;
+        grid-template-columns: 33% 33% 33%;
+        grid-column-gap: 15px;
+        row-gap: 20px;
+        @include media-breakpoint-down(xl){
+            grid-template-columns: 50% 50%;
+        }
+        @include media-breakpoint-down(md){
+            grid-template-columns: 100%;
+        }
+      
+        .certificate-wrapper{
+            padding:17px 16px;
+            position: relative;
+            overflow: hidden;
+            &::after{
+                content:"";
+                width: 337px;
+                height: 90px;
+                background-color: map-get($map: $color-map, $key: Maroon-90);
+                position: absolute;
+                border-radius: 65px;
+                transition: all 500ms ease;
+                top: 120px;
+                inset-inline-start: -92px;
+                z-index: 1;
+
+            }
+
+            &:hover{
+                color: map-get($map: $color-map, $key: white);
+                &::after{
+                    content:"";
+                    width: 337px;
+                    height: 90px;
+                    position: absolute;
+                    border-radius: 15px;
+                    top: 0;
+                    inset-inline-start: 0;
+                    z-index: 1;
+
+                }
+                .certificate-detail-link{
+                    background-color: map-get($map: $color-map, $key: bone50);
+                }
+            }
+        }
+    } 
+
+}
+
+@mixin rtl {
+    html[dir="rtl"] & {
+      @content;
+    }
+}
+
+
+
+// @mixin corners($radius) {
+// 	border-radius: $radius;
+// 	-webkit-border-radius: $radius;
+// 	-moz-border-radius: $radius;
+// }
+// @mixin lineClamp($line) {
+//     display: -webkit-box;
+//     -webkit-line-clamp: $line;
+//     -webkit-box-orient: vertical;  
+//     overflow: hidden;
+// }
+
+// @mixin size($width, $height: $width) {
+//     width: $width;
+//     height: $height;
+// }
+
+// @mixin hoverAnim() {
+//     transition: all 300ms;
+// }
+
+// @mixin imgCircle($size, $circle: false) {
+//     width: $size;
+//     height: $size;
+//     @if $circle {
+//         border-radius: 50%;
+//     }
+// }
+
+
+
+// @mixin triangle($size, $color, $direction) {
+//     height: 0;
+//     width: 0;
+
+//     border-color: transparent;
+//     border-style: solid;
+//     border-width: $size;
+
+//     @if $direction == up {
+//         border-bottom-color: $color;
+//     } @else if $direction == right {
+//         border-left-color: $color;
+//     } @else if $direction == down {
+//         border-top-color: $color;
+//     } @else if $direction == left {
+//         border-right-color: $color;
+//     } @else {
+//         @error "Unknown direction #{$direction}.";
+//     }
+// }

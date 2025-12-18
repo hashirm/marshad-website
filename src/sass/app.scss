@@ -1,0 +1,23 @@
+/*!
+* Style Sheet for ""
+* version: 1
+* last modified:2023 By Applab
+* author: Applab
+* website: www.applab.qa
+*/
+
+/*b5 start -------------------------------------------------------------------------------------------------------------------*/
+
+
+@import "../../node_modules/bootstrap/scss/bootstrap";
+
+/*b5 end ---------------------------------------------------------------------------------------------------------------------*/
+
+@import 'base/fonts';
+@import 'themes/ltr';
+@import 'utilities/variables';
+@import 'base/base';
+
+
+@import 'utilities/mixins', 'utilities/functions';
+@import 'layout/header', 'layout/footer', 'layout/home', 'layout/search', 'layout/marshad-works', 'layout/success-story', 'layout/header-dashboard', 'layout/dashboard-home','layout/scholarship-program', 'layout/_single-education-details', 'layout/_department-description.scss','layout/university-choices','layout/dashboard-search','layout/qualification', 'modules/common','layout/questions', 'modules/buttons', 'base/reset';

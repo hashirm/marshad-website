@@ -1,0 +1,347 @@
+doctype html
+html(dir="rtl" lang="ar")
+    head
+        meta(charset="UTF-8")
+        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="description" content="")
+        meta(name="keywords" content="")
+        meta(property="og:title" content="")
+        meta(property="og:description" content="")
+        link(rel="icon" href="assets/images/favicon.ico" type="image/x-icon")
+        link(rel="preconnect" href="https://fonts.googleapis.com")
+        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        link(href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css")
+
+        noscript
+            link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap")
+
+        //- link(rel="stylesheet", href="assets/_css/app.css" media="print" onload="this.onload=null;this.removeAttribute('media');")
+        link(rel="stylesheet", href="assets/css/app.min.css" media="print" onload="this.onload=null;this.removeAttribute('media');")
+        noscript
+            //- link(rel="stylesheet", href="assets/_css/app.css")
+            link(rel="stylesheet", href="assets/css/app.min.css")
+            
+        title Home page
+    body
+        #firstVisitModal.homepage-modal.modal.fade(tabindex='-1' aria-labelledby='modalLabel' aria-hidden='true')
+            .modal-dialog.modal-dialog-centered
+                .modal-content
+                    button.btn-close(type='button' data-bs-dismiss='modal' aria-label='Close')
+                    .modal-body.d-flex
+                        img(src="assets/images/join-now.png", alt="", srcset="")
+                        .homepage-modal-content 
+                            img.align-self-center.align-self-sm-start(src="assets/images/border-line-popup.png", alt="", srcset="")
+                            img.home-page-logo(src="assets/images/homepage-modal-logo.png", alt="", srcset="")
+                            p Lorem ipsum dolor sit amet, consectetur adipiscing elit. Cras ornare eros eget justo scelerisque suscipit. Mauris mattis ex mauris, non tempus felis dapibus in.
+                            a.btn-large.homepage-modal-btn.text-decoration-none.text-white(href="javascript:void(0)") Learn more 
+        main 
+            section.hero-section
+                .header-content.position-relative  
+                    include ../partials/_header
+                .hero-content 
+                    span Welcome to Marshad 
+                    h1.hero-text 
+                        | Discover your ideal career path 
+                    p QCDC aims to help Qatar’s Youth to identify and fulfill their education and career goals. 
+                    button.hero-btn Get Started
+                        img.position-absolute(src="assets/images/icons/arrowLeft.png", alt="", srcset="")
+                .videoContent
+                    //- button.play-pause.position-absolute 
+                    //-     img.pause(src="assets/images/pause-03.png", alt="", srcset="")
+                    //-     img.play.d-none(src="assets/images/play-icon.png", alt="", srcset="")
+                    a.d-flex.flex-column.gap-5.align-items-center.arrowDown#scrollBtn(href="#")
+                        img(src="assets/images/arrowDown.png", alt="", srcset="") 
+                        .line-arrow 
+                        //- img(src="assets/images/line-arrow.png", alt="", srcset="")
+                    .video-slider#heroVideo
+                        video(autoplay="autoplay" muted loop)
+                            source(src="assets/images/hero-banner-video.mp4")
+                        //- video(autoplay="autoplay" muted loop)
+                        //-     source(src="assets/images/hero-banner-video.mp4")
+                        //- video(autoplay="autoplay" muted loop)
+                        //-     source(src="assets/images/hero-banner-video.mp4")
+            .sections-wrapper.position-relative
+                .social-links.position-absolute 
+                    //- img(src="assets/images/line-00.png", alt="")
+                    .social-links-content
+                        img(src="assets/images/lineSocial.png", alt="", srcset="")
+                        a(href="").social-site.facebook 
+                                img(src="assets/images/icons/facebook.png", alt="", srcset="")
+                        a(href="").social-site.linkedin 
+                                img(src="assets/images/icons/linkedin.png", alt="", srcset="")
+                        a(href="").social-site.instagram
+                                img(src="assets/images/icons/instagram.png", alt="", srcset="")
+                        a(href="").social-site.twitter
+                                img(src="assets/images/icons/x-twitter.png", alt="", srcset="")
+                        a(href="").social-site.youtube 
+                                img(src="assets/images/icons/youtube.png", alt="", srcset="")
+                section.steps 
+                    .container
+                        h2.section-title
+                            | How 
+                            span Marshad 
+                            | works
+                        .steps-content.d-flex.flex-column.flex-lg-row.justify-content-center.gap-3
+                            .step-wrapper.position-relative
+                                .step.position-relative
+                                    img(src="assets/images/icons/book.svg", alt="", srcset="")
+                                    .step-desc.text-center
+                                        h3 Specialization Program
+                                        p Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                        a.mt-5.btn-large(href="") More Info
+                                .connector.position-absolute
+                            .step-wrapper.position-relative
+                                .step.position-relative
+                                    img(src="assets/images/icons/system.svg", alt="", srcset="")
+                                    .step-desc.text-center
+                                        h3 Dalilah System
+                                        p Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                        a.mt-5.btn-large(href="") More Info
+                                .connector.position-absolute
+                            .step-wrapper.position-relative
+                                .step.position-relative
+                                    img(src="assets/images/icons/shadow.svg", alt="", srcset="")
+                                    .step-desc.text-center
+                                        h3 Job Shadowing Programs
+                                        p Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
+                                        a.mt-5.btn-large(href="") More Info
+                section.career-stages
+                    .stages-container
+                        h2.section-title
+                            | Stages of career development
+                        .stages.d-flex.justify-content-center 
+                            .stage
+                                h6 Stage 
+                                .number 01
+                                p.title.d-flex.align-items-center.gap-2 
+                                    img(src="assets/images/thinking.png" alt="" srcset="") 
+                                    | Explore your needs
+                                .description 
+                                    p Helping students identify what they need and want in life and career.
+                            .stage.odd.align-self-end
+                                h6 Stage 
+                                .number 02
+                                p.title.d-flex.align-items-center.gap-2 
+                                    img(src="assets/images/research.png" alt="" srcset="") 
+                                    | Explore your needs
+                                .description 
+                                    p Helping students identify what they need and want in life and career.
+                            .stage
+                                h6 Stage 
+                                .number 03
+                                p.title.d-flex.align-items-center.gap-2
+                                    img(src="assets/images/understand-opportunity.png" alt="" srcset="")  
+                                    | Explore your needs
+                                .description 
+                                    p Helping students identify what they need and want in life and career.
+                            .stage.odd.align-self-end
+                                h6 Stage 
+                                .number 04
+                                p.title.d-flex.align-items-center.gap-2
+                                    img(src="assets/images/informed-decision.png" alt="" srcset="") 
+                                    | Explore your needs
+                                .description 
+                                    p Helping students identify what they need and want in life and career.
+                            .stage
+                                h6 Stage 
+                                .number 05
+                                p.title.d-flex.align-items-center.gap-2 
+                                    img(src="assets/images/define-your-goal.png" alt="" srcset="")
+                                    | Explore your needs
+                                .description 
+                                    p Helping students identify what they need and want in life and career.
+                                    
+                            .stage-popup-wrapper
+                                .cross.position-absolute 
+                                    img(src="assets/images/cross.png", alt="", srcset="")
+                                img(src="assets/images/border-line-popup.png", alt="")
+                                .stage-popup 
+                                    h5 Explore your needs   
+                                    p Helping students identify what they need and want in life and career.
+                                    a.d-block.btn-large.w-100.text-white(href="#") More Info 
+                                
+                section.testimonial
+                    h2.section-title 
+                        | What our students say
+                    .testimonial-content
+                        .students.d-flex.flex-column
+                            .student
+                                img(src="assets/images/student-01-img.png", alt="", srcset="")
+                                .student-desc
+                                    h6 Abdulla Al-mansoori
+                                    p University Student
+                            .waveline
+                                //- img(src="assets/images/line.png", alt="")
+                            .student 
+                                img(src="assets/images/student-02-img.png", alt="", srcset="")
+                                .student-desc
+                                    h6 Abdulla Al-mansoori
+                                    p University Student
+                            .waveline
+                                //- img(src="assets/images/line.png", alt="")
+                            .student 
+                                img(src="assets/images/student-03-img.png", alt="", srcset="")
+                                .student-desc
+                                    h6 Abdulla Al-mansoori
+                                    p University Student
+                            .waveline
+                                //- img.waveline(src="assets/images/line.png", alt="")
+                            .student 
+                                img(src="assets/images/student-04-img.png", alt="", srcset="")
+                                .student-desc
+                                    h6 Abdulla Al-mansoori
+                                    p University Student
+                        .testimonial-slider
+                            .testimonial-item
+                                .video-thumnail.position-relative
+                                    img(src="assets/images/thumbnail-img-000.png", alt="", srcset="")
+                                    .thumbnail-label.position-absolute
+                                        .playCircle-wrapper
+                                            .playCircle 
+                                                img(src="assets/images/thumbnail-play-icon.png", alt="", srcset="")
+                                        span PLAY VIDEO 
+                                .testimonial-text
+                                    img.mb-2(src="assets/images/comma.png", alt="", srcset="")
+                                    p Marshad  has been an invaluable asset to my academic journey. The comprehensive resources, engaging study materials, and interactive features have significantly enhanced my learning experience. The platform's user-friendly interface and personalized learning plans have helped me stay organized and motivated.
+                                    h4 Abdulla Al-mansoori
+                                    span University Student
+                            .testimonial-item
+                                .video-thumnail.position-relative
+                                    img(src="assets/images/thumbnail-img-000.png", alt="", srcset="")
+                                    .thumbnail-label.position-absolute
+                                        .playCircle-wrapper
+                                            .playCircle 
+                                                img(src="assets/images/thumbnail-play-icon.png", alt="", srcset="")
+                                        span PLAY VIDEO 
+                                .testimonial-text
+                                    img.mb-2(src="assets/images/comma.png", alt="", srcset="")
+                                    p Marshad  has been an invaluable asset to my academic journey. The comprehensive resources, engaging study materials, and interactive features have significantly enhanced my learning experience. The platform's user-friendly interface and personalized learning plans have helped me stay organized and motivated.
+                                    h4 Abdulla Al-mansoori
+                                    span University Student
+                            .testimonial-item
+                                .video-thumnail.position-relative
+                                    img(src="assets/images/thumbnail-img-000.png", alt="", srcset="")
+                                    .thumbnail-label.position-absolute
+                                        .playCircle-wrapper
+                                            .playCircle 
+                                                img(src="assets/images/thumbnail-play-icon.png", alt="", srcset="")
+                                        span PLAY VIDEO 
+                                .testimonial-text
+                                    img.mb-2(src="assets/images/comma.png", alt="", srcset="")
+                                    p Marshad  has been an invaluable asset to my academic journey. The comprehensive resources, engaging study materials, and interactive features have significantly enhanced my learning experience. The platform's user-friendly interface and personalized learning plans have helped me stay organized and motivated.
+                                    h4 Abdulla Al-mansoori
+                                    span University Student
+                section.partners 
+                    .container 
+                        .partners-title.d-flex.flex-column.flex-lg-row.row-gap-4.align-items-start.justify-content-center     
+                            img(src="assets/images/line.png", alt="", srcset="")
+                            h2.px-4 Partners for Success
+                            img(src="assets/images/line.png", alt="", srcset="")
+                        .partners-subtitle 
+                            p.text-center Thanks to our exceptional partners, we have succeeded in overcoming challenges and achieving our shared goals.
+                    .partners-logo-slider
+                        .item
+                            img(src="assets/images/logo-01.png", alt="")
+                        .item
+                            img(src="assets/images/logo-02.png", alt="")
+                        .item
+                            img(src="assets/images/logo-03.png", alt="")
+                        .item
+                            img(src="assets/images/logo-04.png", alt="")
+                        .item 
+                            img(src="assets/images/logo-05.png", alt="")   
+                        .item
+                            img(src="assets/images/logo-04.png", alt="")
+                        .item 
+                            img(src="assets/images/logo-05.png", alt="")                                 
+
+                section.success-stories 
+                    .container
+                        h2.section-title 
+                            | Success Stories
+                        .successStories 
+                            .story
+                                .story-wrapper.story-wrapper-01
+                                    .story-single.position-relative.story-expanded.story-01
+                                        .text-desc
+                                            p.position-relative
+                                                span Marshad has been an invaluable asset to my academic journey. 
+                                                |  The comprehensive resources, interesting course materials, and interactive features have greatly enhanced my learning experience 
+                                            h4 Abdulla Al-Mansoori 
+                                            h5 Director
+                                            a.readmore-btn.btn-large.text-white 
+                                                | Read More
+                                                img.position-absolute(src="assets/images/icons/arrowLeft.png", alt="", srcset="")
+                                        img.position-absolute(src="assets/images/story-01-img.png", alt="", srcset="")
+                                    .story-single.position-relative.story-02.story-collapse
+                                        .text-desc
+                                            p.position-relative
+                                                span Marshad has been an invaluable asset to my academic journey. 
+                                                |The comprehensive resources, engaging study materials, and interactive features have significantly enhanced my learning experience. 
+                                            h4 Abdulla Al-Mansoori 
+                                            h5 Director
+                                            a.readmore-btn.btn-large.text-white 
+                                                | Read More
+                                                img.position-absolute(src="assets/images/icons/arrowLeft.png", alt="", srcset="")
+                                        img.position-absolute(src="assets/images/story-03-img-02.png", alt="", srcset="")
+                                    .story-single.position-relative.story-03.story-collapse
+                                        .text-desc
+                                            p.position-relative
+                                                span Marshad has been an invaluable asset to my academic journey. 
+                                                |The comprehensive resources, engaging study materials, and interactive features have significantly enhanced my learning experience. 
+                                            h4 Abdulla Al-Mansoori 
+                                            h5 Director
+                                            a.readmore-btn.btn-large.text-white 
+                                                | Read More
+                                                img.position-absolute(src="assets/images/icons/arrowLeft.png", alt="", srcset="")
+                                        img.position-absolute(src="assets/images/story-02-img-02.png", alt="", srcset="")
+                            .story
+                                .story-wrapper.story-wrapper-02
+                                    .story-single.position-relative.story-expanded.story-01
+                                        .text-desc
+                                            p.position-relative
+                                                span Marshad has been an invaluable asset to my academic journey. 
+                                                |  The comprehensive resources, interesting course materials, and interactive features have greatly enhanced my learning experience 
+                                            h4 Abdulla Al-Mansoori 
+                                            h5 Director
+                                            a.readmore-btn.btn-large.text-white(href="#") 
+                                                | Read More
+                                                img.position-absolute(src="assets/images/icons/arrowLeft.png", alt="", srcset="")
+                                        img.position-absolute(src="assets/images/story-01-img.png", alt="", srcset="")
+                                    .story-single.position-relative.story-02.story-collapse
+                                        .text-desc
+                                            p.position-relative
+                                                span Marshad has been an invaluable asset to my academic journey. 
+                                                |The comprehensive resources, engaging study materials, and interactive features have significantly enhanced my learning experience. 
+                                            h4 Abdulla Al-Mansoori 
+                                            h5 Director
+                                            a.readmore-btn.btn-large.text-white(href="#")  
+                                                | Read More
+                                                img.position-absolute(src="assets/images/icons/arrowLeft.png", alt="", srcset="")
+                                        img.position-absolute(src="assets/images/story-03-img-02.png", alt="", srcset="")
+                                    .story-single.position-relative.story-03.story-collapse
+                                        .text-desc
+                                            p.position-relative
+                                                span Marshad has been an invaluable asset to my academic journey. 
+                                                |The comprehensive resources, engaging study materials, and interactive features have significantly enhanced my learning experience. 
+                                            h4 Abdulla Al-Mansoori 
+                                            h5 Director
+                                            a.readmore-btn.btn-large.text-white(href="#") 
+                                                | Read More
+                                                img.position-absolute(src="assets/images/icons/arrowLeft.png", alt="", srcset="")
+                                        img.position-absolute(src="assets/images/story-02-img-02.png", alt="", srcset="")
+                            
+
+        include ../partials/_footer
+       
+        script(src='https://code.jquery.com/jquery-3.6.0.min.js')
+        script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js')
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js')
+        script(src="assets/js/header.js")
+        script(src="assets/js/home.js")
+
+        script(async, src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js", crossorigin="anonymous")
+     
+            //- new Popover(document.getElementById('popoverButton'))

@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html dir="ltr" lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="keywords" content="">
+    <meta property="og:title" content="">
+    <meta property="og:description" content="">
+    <link rel="icon" href="assets/images/favicon.ico" type="image/x-icon">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&amp;family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&amp;display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer">
+    <noscript>
+      <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&amp;display=swap">
+    </noscript>
+    <link rel="stylesheet" href="assets/css/app.min.css" media="print" onload="this.onload=null;this.removeAttribute('media');">
+    <noscript>
+      <link rel="stylesheet" href="assets/css/app.min.css">
+    </noscript>
+    <title>University Major</title>
+  </head>
+  <body>
+    <header class="header-dashboard">
+      <div class="header-content-wrapper">
+        <div class="header-content d-flex justify-content-between align-items-center">
+          <div class="logo-image"><img src="assets/images/marshad-dashboard-logo.png" alt="" srcset=""></div>
+          <div class="search-form-buttons d-flex">
+            <div class="searchInput">
+              <form action="">
+                <fieldset class="position-relative d-flex justify-content-end">
+                  <div class="search-icon position-absolute d-flex align-items-center justify-content-center"><img src="assets/images/dashboard-search-icon.png" alt="" srcset=""></div>
+                  <input class="form-control d-none d-xl-block" id="searchInput" type="text" name="" placeholder="What are you looking for?">
+                </fieldset>
+              </form>
+            </div>
+            <div class="lang-switcher-signup d-flex"><a class="lang text-decoration-none" type="button" href=""> <img src="assets/images/dashboard-ar.png" alt="" srcset=""></a><a class="d-none d-lg-block text-decoration-none lang text-nowrap purchase-btn-wrapper" href="#">Purchase Majors Guide</a><a class="text-decoration-none signIn text-white text-nowrap" data-bs-target="#signInmodal" data-bs-toggle="modal" href="#">Sign In</a></div>
+          </div>
+        </div><a class="mobile-link d-block d-lg-none text-end purchase-btn-wrapper" href="javascript:void(0)">Purchase Majors Guide</a>
+      </div>
+    </header>
+    <div class="full-page-overlay d-none"></div>
+    <div class="dashboard-header-modal">
+      <div class="modal fade" id="signUpmodal" aria-hidden="true" aria-labelledby="signUpmodalLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-body">
+              <div class="modal-body-content-wrapper d-flex"> 
+                <div class="img-content"> <img src="assets/images/men-women.png" alt="" srcset=""></div>
+                <div class="form-content signup w-100"> 
+                  <h2>Create account </h2>
+                  <p>Enter the following details </p>
+                  <form action="#">
+                    <label for="">Full name </label>
+                    <input class="form-control" type="text" placeholder="Full name" required>
+                    <label for="">Email</label>
+                    <input class="form-control" type="email" placeholder="Email" required>
+                    <label class="d-block" for="">Mobile number </label>
+                    <input class="form-control" type="number" id="mobile_code" placeholder="Phone Number" name="name" style="padding-left:144px;" required>
+                    <label for="">Password</label>
+                    <div class="password-field position-relative"> <img class="eye-icon position-absolute" src="assets/images/eye-01.png" alt="" srcset="">
+                      <input class="password-textBox form-control" type="password" placeholder="Password" required>
+                    </div>
+                    <label for="">Confirm Password</label>
+                    <div class="password-field position-relative"> <img class="eye-icon position-absolute" src="assets/images/eye-01.png" alt="" srcset="">
+                      <input class="password-textBox form-control" type="password" placeholder="Confirm Password" required>
+                    </div>
+                    <div class="select-field position-relative">
+                      <label for="">Persona</label>
+                      <select class="d-block w-100" name="menu" id="meun-items">
+                        <option disabled selected>Select Cource</option>
+                        <option value="html">HTML</option>
+                        <option value="css">CSS</option>
+                        <option value="js">JAVASCRIPT</option>
+                        <option value="c">LANGUAGE</option>
+                      </select>
+                    </div>
+                    <input class="btn-large text-white form-control" type="submit" value="Next">
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="dashboard-header-modal">
+      <div class="modal fade" id="signInmodal" aria-hidden="true" aria-labelledby="signInmodalLabel" tabindex="-1">
+        <div class="modal-dialog modal-dialog-centered">
+          <div class="modal-content">
+            <button class="btn-close" type="button" data-bs-dismiss="modal" aria-label="Close"></button>
+            <div class="modal-body">
+              <div class="modal-body-content-wrapper d-flex"> 
+                <div class="img-content"> <img src="assets/images/men-women.png" alt="" srcset=""></div>
+                <div class="form-content w-100"> 
+                  <h2>Login </h2>
+                  <p>Enter the following details </p>
+                  <form action="#">
+                    <label for="">Email</label>
+                    <input class="form-control" type="email" placeholder="Email" required>
+                    <label for="">Password</label>
+                    <div class="password-field position-relative"> <img class="eye-icon position-absolute" src="assets/images/eye-01.png" alt="" srcset="">
+                      <input class="password-textBox form-control" type="password" placeholder="Password" required>
+                    </div>
+                    <input class="btn-large text-white d-block w-100" type="submit" value="Login">
+                    <p class="signup-message text-center">
+                       Don't have an account?<a class="ms-1 text-bold" href="#" data-bs-target="#signUpmodal" data-bs-toggle="modal">Sign up!</a></p>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="purchase-major-guide">
+      <div class="close position-absolute bg-white"> <img src="assets/images/cross.png" alt="" srcset=""></div>
+      <div class="purchase-major-guide-content d-flex">
+        <div class="popup-img d-none d-lg-block"><img src="assets/images/purchase-major-guide-img.png" alt="" srcset=""></div>
+        <div class="popup-text"> <img src="assets/images/border-line-popup.png" alt="" srcset="">
+          <h6 class="popup-title">
+             Visit the <span>Daleela Platform</span> to schedule a session with a career counselor.</h6>
+          <p>Browse available counselor profiles, select a suitable time slot that fits your schedule, and book your appointment</p><a class="d-block text-decoration-none btn-large text-white border-0" href="#">
+             Proceed to purchase </a>
+        </div>
+      </div>
+    </div>
+    <div class="full-page-overlay d-none"></div>
+    <div class="search-box"><a class="cross-searchBox" href="#"><img src="assets/images/cross.png" alt="" srcset=""></a>
+      <div class="container"> 
+        <h3 class="searh-box-title">What are you searching for?</h3>
+        <form>
+          <fieldset>
+            <div class="search-textBox-wrapper position-relative"> <img class="position-absolute" src="assets/images/CGB-Settings.png" alt="" srcset="">
+              <input class="form-control search-textBox" type="search" placeholder="Job title or skills" id="search-input">
+            </div>
+            <input class="mt-3 mt-md-0 search-btn" type="submit" value="Search">
+          </fieldset>
+        </form>
+        <h4>Recent searches</h4>
+        <div class="recent-searches"> 
+          <div class="recent-search-item"><a class="university active" href="recentsearch">Qatar University</a><a class="text-decoration-none" href="cross"> <img src="assets/images/active-cross.png" alt="" srcset=""></a></div>
+          <div class="recent-search-item"> <a class="university" href="#">Hamad Bin Khalifa University</a><a class="text-decoration-none" href="cross"> <img src="assets/images/cross-search-recent.png" alt="" srcset=""></a></div>
+          <div class="recent-search-item"> <a class="university" href="#">Weill Cornell Medicine university in Qatar</a><a class="text-decoration-none" href="cross"> <img src="assets/images/cross-search-recent.png" alt="" srcset=""></a></div>
+        </div>
+      </div>
+    </div>
+    <main class="scholarship amiri-scholarship">
+      <div class="breadcrum-wrapper">
+        <nav class="dashboard-container breadcrumb-nav" aria-label="breadcrumb">
+          <ol class="breadcrumb">
+            <li class="breadcrumb-item"><a href="#">Home</a></li>
+            <li class="breadcrumb-item"><a href="#">Government Scholarship Program</a></li>
+            <li class="breadcrumb-item active" aria-current="page">Amiri Scholarship </li>
+          </ol>
+        </nav>
+      </div>
+      <div class="dashboard-container">
+        <div class="go-back"> <a class="d-flex gap-2 align-items-center" href="#"><img src="assets/images/arrowBack.png" alt="" srcset="">Back </a></div>
+        <section class="single-education-details">
+          <div class="single-education-title d-flex flex-column flex-lg-row align-items-start align-items-lg-center justify-content-between">
+            <h1>Amiri Scholarship </h1><a href="# ">Submission</a>
+          </div>
+          <p>The Scholarships Department oversees the process of sending students who wish to study at the pre-university level (diploma), undergraduate level (bachelor's degree), and graduate studies at the state's expense. This study can take place either within the State of Qatar or abroad, based on a set of policies and strategies that regulate the scholarship process, starting from the student's registration in the electronic system, through to the signing of the scholarship student's contract, and ending with the graduation certificate. This process is supervised and monitored by the Ministry of Education and Higher Education of the State of Qatar.</p>
+          <h2>List of Universities of the Amiri Scholarship Program:</h2>
+          <div class="university-state-wrapper thead"> 
+            <p class="uni-name">University </p>
+            <p class="state-name">State</p>
+          </div>
+          <div class="university-state-wrapper"> 
+            <p class="uni-name"> Brown University USA </p>
+            <p class="state-name">California, USA</p>
+          </div>
+          <div class="university-state-wrapper"> 
+            <p class="uni-name">California Institute of Technology  </p>
+            <p class="state-name">New York, USA</p>
+          </div>
+          <div class="university-state-wrapper"> 
+            <p class="uni-name"> Brown University USA </p>
+            <p class="state-name">Minnesota, USA</p>
+          </div>
+          <div class="university-state-wrapper"> 
+            <p class="uni-name"> Brown University USA </p>
+            <p class="state-name">California, USA</p>
+          </div>
+          <div class="university-state-wrapper"> 
+            <p class="uni-name">California Institute of Technology  </p>
+            <p class="state-name">New York, USA</p>
+          </div>
+          <div class="university-state-wrapper"> 
+            <p class="uni-name"> Brown University USA </p>
+            <p class="state-name">Minnesota, USA</p>
+          </div>
+        </section>
+        <div class="footer-footer d-flex flex-column flex-lg-row align-items-center justify-content-between row-gap-4"> 
+          <div class="textContent-copyright"> <a href="#">© Marshad Qatar Career Development Center © 2024</a></div>
+          <ul class="d-flex justify-content-center row-gap-2 flex-wrap list-unstyled m-0"> 
+            <li> <a href="#">Terms of Use </a></li>
+            <li> <a href="#">Cookie Policy</a></li>
+            <li> <a href="#">Privacy Policy </a></li>
+            <li> <a href="#">Accessibility </a></li>
+          </ul>
+        </div>
+      </div>
+    </main>
+    <script src="https://code.jquery.com/jquery-3.6.0.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js"></script>
+    <script src="assets/js/header.js"></script>
+    <script src="assets/js/home.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
+    <script type="importmap" defer>
+      {
+          "imports": {
+              "@popperjs/core": "https://cdn.jsdelivr.net/npm/@popperjs/core@2.11.8/dist/esm/popper.min.js",
+              "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.esm.min.js"
+          }
+      }
+    </script>
+    <script async src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous"></script>
+  </body>
+</html>
