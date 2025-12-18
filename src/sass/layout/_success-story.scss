@@ -130,14 +130,14 @@
         max-width: 654px;
         width: 100%;
         h1{
-            font-family: var(--secondary-font);
+            // font-family: var(--secondary-font);
             color: map-get($map: $color-map, $key:bg-primary);
             font-size:26px;
             font-weight: 600;
         }
         h2{
             font-size:18px;
-            font-family: var(--secondary-font);
+            // font-family: var(--secondary-font);
             color: map-get($map: $color-map, $key: bistre);
         }
     }
@@ -417,6 +417,7 @@ button + button {
   /**/
   /*css to style input type="range"*/
   input[type='range'] {
+    appearance: none;
     -webkit-appearance: none;
     background: transparent;
     width: 40%;

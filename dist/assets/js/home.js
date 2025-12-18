@@ -47,126 +47,166 @@
         
 
 
-        $('.testimonial-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
-            let totalSlides = slick.slideCount; // Total number of slides
-            let isForward = nextSlide > currentSlide || (currentSlide === totalSlides - 1 && nextSlide === 0);
-            let isBackward = nextSlide < currentSlide || (currentSlide === 0 && nextSlide === totalSlides - 1);
+        // $('.testimonial-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide){
+        //     let totalSlides = slick.slideCount; // Total number of slides
+        //     let isForward = nextSlide > currentSlide || (currentSlide === totalSlides - 1 && nextSlide === 0);
+        //     let isBackward = nextSlide < currentSlide || (currentSlide === 0 && nextSlide === totalSlides - 1);
             
-            let animateWaveline = $('.students .waveline');
-            let studentpic = $('.students .student > img');
-            let studentdescH6 = $('.students .student-desc > h6');
+        //     let animateWaveline = $('.students .waveline');
+        //     let studentpic = $('.students .student > img');
+        //     let studentdescH6 = $('.students .student-desc > h6');
 
            
         
-            if (slick.currentSlide == '0' && isForward) {
-                // Moving forward
-                animateWaveline.eq(0).css("transform", "translate(-160px, 0px)");
-                animateWaveline.eq(1).css("transform", "translate(160px, 0px)");
+        //     if (slick.currentSlide == '0' && isForward) {
+        //         // Moving forward
+        //         animateWaveline.eq(0).css("transform", "translate(-160px, 0px)");
+        //         animateWaveline.eq(1).css("transform", "translate(160px, 0px)");
 
-                if (window.matchMedia("(min-width: 1861px)").matches) {
-                    studentpic.eq(0).css("filter", "grayscale(1)");
-                    studentpic.eq(1).css("filter", "unset");
+        //         if (window.matchMedia("(min-width: 1861px)").matches) {
+        //             studentpic.eq(0).css("filter", "grayscale(1)");
+        //             studentpic.eq(1).css("filter", "unset");
                   
-                  }else{
-                    studentpic.eq(0).css("filter", "unset");
-                  }
+        //           }else{
+        //             studentpic.eq(0).css("filter", "unset");
+        //           }
                
                 
-                // studentdescH6.eq(0).css("font-size","20px")
-                // console.log(animateWaveline.eq(1));
-            } else if (slick.currentSlide == '1' && isForward) {
-                // Moving backward (reverse direction)
-                animateWaveline.eq(1).css("transform", "translate(-160px, 0px)");
-                animateWaveline.eq(2).css("transform", "translate(160px, 0px)");
-                // studentdescH6.eq(0).css("font-size","18px")
-                // studentdescH6.eq(1).css("font-size","20px")
-                studentpic.eq(0).css("filter", "grayscale(1)");
-                studentpic.eq(1).css("filter", "grayscale(1)");
-                studentpic.eq(2).css("filter", "unset");
-                // studentpic.eq(3).css("filter", "unset");
-                // console.log('Moving backward');
-            } else if (slick.currentSlide == '2' && isForward){
-                // Moving backward (reverse direction)
-                animateWaveline.eq(1).css("transform", "translate(160px, 0px)");
-                animateWaveline.eq(2).css("transform", "translate(-160px, 0px)");
-                studentpic.eq(2).css("filter", "unset");
-                studentpic.eq(3).css("filter", "unset");
-                // studentdescH6.eq(1).css("font-size","18px")
-                // studentdescH6.eq(2).css("font-size","20px")
-                // console.log('Moving backward');
-            }
-            else if (slick.currentSlide == '2' && isBackward) {
-                // Moving backward
-                animateWaveline.eq(1).css("transform", "translate(160px, 0px)");
-                animateWaveline.eq(2).css("transform", "translate(-160px, 0px)");
-                studentpic.eq(2).css("filter", "grayscale(1)");
-                studentpic.eq(3).css("filter", "grayscale(1)");
-                studentpic.eq(1).css("filter", "unset");
-                // studentdescH6.eq(1).css("font-size","18px")
-                // studentdescH6.eq(2).css("font-size","20px")
-            }
-            else if (slick.currentSlide == '1' && isBackward) {
-                // Moving backward
-                animateWaveline.eq(0).css("transform", "translate(160px, 0px)");
-                animateWaveline.eq(1).css("transform", "translate(-160px, 0px)");
-                studentpic.eq(2).css("filter", "grayscale(1)");
-                studentpic.eq(3).css("filter", "grayscale(1)");
-                studentpic.eq(0).css("filter", "unset");
-                studentpic.eq(1).css("filter", "grayscale()");
-            }
-        });
+        //         // studentdescH6.eq(0).css("font-size","20px")
+        //         // console.log(animateWaveline.eq(1));
+        //     } else if (slick.currentSlide == '1' && isForward) {
+        //         // Moving backward (reverse direction)
+        //         animateWaveline.eq(1).css("transform", "translate(-160px, 0px)");
+        //         animateWaveline.eq(2).css("transform", "translate(160px, 0px)");
+        //         // studentdescH6.eq(0).css("font-size","18px")
+        //         // studentdescH6.eq(1).css("font-size","20px")
+        //         studentpic.eq(0).css("filter", "grayscale(1)");
+        //         studentpic.eq(1).css("filter", "grayscale(1)");
+        //         studentpic.eq(2).css("filter", "unset");
+        //         // studentpic.eq(3).css("filter", "unset");
+        //         // console.log('Moving backward');
+        //     } else if (slick.currentSlide == '2' && isForward){
+        //         // Moving backward (reverse direction)
+        //         animateWaveline.eq(1).css("transform", "translate(160px, 0px)");
+        //         animateWaveline.eq(2).css("transform", "translate(-160px, 0px)");
+        //         studentpic.eq(2).css("filter", "unset");
+        //         studentpic.eq(3).css("filter", "unset");
+        //         // studentdescH6.eq(1).css("font-size","18px")
+        //         // studentdescH6.eq(2).css("font-size","20px")
+        //         // console.log('Moving backward');
+        //     }
+        //     else if (slick.currentSlide == '2' && isBackward) {
+        //         // Moving backward
+        //         animateWaveline.eq(1).css("transform", "translate(160px, 0px)");
+        //         animateWaveline.eq(2).css("transform", "translate(-160px, 0px)");
+        //         studentpic.eq(2).css("filter", "grayscale(1)");
+        //         studentpic.eq(3).css("filter", "grayscale(1)");
+        //         studentpic.eq(1).css("filter", "unset");
+        //         // studentdescH6.eq(1).css("font-size","18px")
+        //         // studentdescH6.eq(2).css("font-size","20px")
+        //     }
+        //     else if (slick.currentSlide == '1' && isBackward) {
+        //         // Moving backward
+        //         animateWaveline.eq(0).css("transform", "translate(160px, 0px)");
+        //         animateWaveline.eq(1).css("transform", "translate(-160px, 0px)");
+        //         studentpic.eq(2).css("filter", "grayscale(1)");
+        //         studentpic.eq(3).css("filter", "grayscale(1)");
+        //         studentpic.eq(0).css("filter", "unset");
+        //         studentpic.eq(1).css("filter", "grayscale()");
+        //     }
+        // });
+
+            $('.testimonial-slider').on('beforeChange', function(event, slick, currentSlide, nextSlide) {
+                let totalSlides = slick.slideCount; // Total slides
+                let isForward = nextSlide >= currentSlide || (currentSlide === totalSlides - 1 && nextSlide === 0);
+                let isBackward = nextSlide <= currentSlide || (currentSlide === 0 && nextSlide === totalSlides - 1);
+
+                let animateWaveline = $('.students .waveline');
+                let studentpic = $('.students .student > img');
+
+                // Reset everything before applying
+                animateWaveline.css("transform", "");
+                studentpic.css("filter", "grayscale(1)");
+
+                // Always highlight the active (next) student
+                studentpic.eq(nextSlide).css("filter", "unset");
+
+                // Handle waveline animation dynamically
+                if (isForward) {
+                    // Forward movement: current → next
+                    animateWaveline.eq(currentSlide).css("transform", "translate(-160px, 0px)");
+                    animateWaveline.eq(nextSlide).css("transform", "translate(160px, 0px)");
+                } else if (isBackward) {
+                    // Backward movement: current → next
+                    animateWaveline.eq(currentSlide).css("transform", "translate(160px, 0px)");
+                    animateWaveline.eq(nextSlide).css("transform", "translate(-160px, 0px)");
+                }
+
+                // Optional: for large screens, allow the previous slide to stay colored
+                if (window.matchMedia("(min-width: 1861px)").matches) {
+                    studentpic.eq(currentSlide).css("filter", "grayscale(1)");
+                    studentpic.eq(nextSlide).css("filter", "unset");
+                }
+            });
+
+            $('.testimonial-slider').on('afterChange', function(event, slick, currentSlide){
+                let $items = $('.students');
+                let $targetItem = $items.find('.student').eq(currentSlide);
 
 
-      
-
-
-        $("#scrollBtn").on('click', function () {
-            $("html, body").animate({ scrollTop: $(target).offset().top }, "slow");
-        });
+                if (currentSlide > 3) {
+                    // Scroll so that the current item is visible
+                    $items.animate({
+                    scrollTop: $items.scrollTop() + 
+                                $targetItem.position().top
+                    }, 400);
+                }else{
+                    $items.animate({
+                    scrollTop: 0
+                    }, 400);
+                }
+            }, );
         
     });
-
-
 
     $(function () {
         // Initialize the slider
         function initializeSlider() {
-          const isRTL = $('html').attr('dir') === 'rtl';
-        //   $('.video-slider').slick({
-        //     autoplay: false,
-        //     autoplaySpeed: 2000,  // Change slide every 2 seconds
-        //     dots: true,           // Show navigation dots
-        //     arrows: false,         // Show next/prev arrows
-        //     infinite: true,       // Infinite looping
-        //     speed: 500,
-        //     rtl:isRTL         // Slide transition speed
-        //     });
+            const isRTL = $('html').attr('dir') === 'rtl';
+            //   $('.video-slider').slick({
+            //     autoplay: false,
+            //     autoplaySpeed: 2000,  // Change slide every 2 seconds
+            //     dots: true,           // Show navigation dots
+            //     arrows: false,         // Show next/prev arrows
+            //     infinite: true,       // Infinite looping
+            //     speed: 500,
+            //     rtl:isRTL         // Slide transition speed
+            //     });
 
-        //     $('.video-slider').on('afterChange', function(){
-        //         let currentSlide = $('.video-slider').slick('slickCurrentSlide');
-        //         console.log(currentSlide);
-        //     })
+            //     $('.video-slider').on('afterChange', function(){
+            //         let currentSlide = $('.video-slider').slick('slickCurrentSlide');
+            //         console.log(currentSlide);
+            //     })
 
+            //     $(".videoContent button.play-pause").on('click',function (event) {
 
-        //     $(".videoContent button.play-pause").on('click',function (event) {
-
-        //         event.preventDefault();
-    
-        //         let video = $(".video-slider video"); // Get video element
-        //         let currentIndex = $('.video-slider').slick('slickCurrentSlide') + 1;
-               
-        //         if (video.attr("autoplay")){
-        //             video.removeAttr("autoplay"); // Remove autoplay
-        //             video[currentIndex].pause();
-        //             $(this).html("<img class='play' src='assets/images/play-icon.png' alt='play'/>");
-                   
-        //         } else {
-        //             video.attr("autoplay", "autoplay"); // Add autoplay
-        //             video[currentIndex].play();
-        //             $(this).html("<img src='assets/images/pause-03.png' alt='pause'/>");
-        //         }
+            //         event.preventDefault();
         
-        //     });
+            //         let video = $(".video-slider video"); // Get video element
+            //         let currentIndex = $('.video-slider').slick('slickCurrentSlide') + 1;
+                
+            //         if (video.attr("autoplay")){
+            //             video.removeAttr("autoplay"); // Remove autoplay
+            //             video[currentIndex].pause();
+            //             $(this).html("<img class='play' src='assets/images/play-icon.png' alt='play'/>");
+                    
+            //         } else {
+            //             video.attr("autoplay", "autoplay"); // Add autoplay
+            //             video[currentIndex].play();
+            //             $(this).html("<img src='assets/images/pause-03.png' alt='pause'/>");
+            //         }
+            
+            //     });
 
         $('.partners .partners-logo-slider').slick({
             autoplay: true,
@@ -212,7 +252,7 @@
         })
             
 
-          $('.testimonial-slider').slick({
+        $('.testimonial-slider').slick({
             autoplay: true,
             autoplaySpeed: 3000,  // Change slide every 3 seconds
             dots: true,           // Show navigation dots
@@ -238,33 +278,33 @@
                     {
                         breakpoint: 991,
                         settings: {
-                            slidesToShow:2,
-                        }
-                    },  
-                    {
-                        breakpoint: 965,
-                        settings: {
-                            slidesToShow:1.7,
-                        }
-                    },  
-                    {
-                        breakpoint: 812,
-                        settings: {
-                            slidesToShow:1.4,
-                        }
-                    },  
-                    {
-                        breakpoint: 767,
-                        settings: {
-                            slidesToShow:1.3,
-                        }
-                    },  
-                    {
-                        breakpoint: 621,
-                        settings: {
                             slidesToShow:1,
                         }
-                    }   
+                    }  
+                    // {
+                    //     breakpoint: 965,
+                    //     settings: {
+                    //         slidesToShow:1.7,
+                    //     }
+                    // },  
+                    // {
+                    //     breakpoint: 812,
+                    //     settings: {
+                    //         slidesToShow:1.4,
+                    //     }
+                    // },  
+                    // {
+                    //     breakpoint: 767,
+                    //     settings: {
+                    //         slidesToShow:1.3,
+                    //     }
+                    // },  
+                    // {
+                    //     breakpoint: 621,
+                    //     settings: {
+                    //         slidesToShow:1,
+                    //     }
+                    // }   
                     
             ]
             });
@@ -289,6 +329,17 @@
 
 
 
+            });
+            $('.successStories').on('wheel', function (e) {
+                e.preventDefault();
+
+                if (e.originalEvent.deltaY < 0) {
+                // Scroll up → Previous slide
+                $(this).slick('slickPrev');
+                } else {
+                // Scroll down → Next slide
+                $(this).slick('slickNext');
+                }
             });
             $('.cards-slider').slick({
                 autoplay: false,
@@ -515,8 +566,7 @@
                     },
                 ] 
             })
-    
-    }
+        }
 
         initializeSlider();
 
@@ -554,6 +604,7 @@
                 $(this).addClass('story-collapse');
                 $(this).css('background-position', 'bottom center !important');
             }
+            
 
         });
 

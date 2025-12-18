@@ -2,6 +2,9 @@
 *, html, body{
     font-family: var(--primary-font);
     font-size: 18px;
-}
 
+    html[dir="rtl"] & {
+        font-family: var(--GE_SS_Two);
+    }
+}
 

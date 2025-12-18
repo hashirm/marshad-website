@@ -120,6 +120,12 @@ header{
 				height: 48px;
 				margin-inline-end:12px;
 				text-decoration: none;
+				
+				font-family: var(--GE_SS_Two);
+					html[dir="rtl"] & {
+						font-family: var(--primary-font);
+					}
+				
 				label{
 					cursor: pointer;
 					font-family: var(--primary-font);
@@ -227,7 +233,8 @@ header{
 		inset-inline-start: 5%;
 	}
 	@include media-breakpoint-down(md){
-		inset-inline-start: 0;
+		inset-inline-start: 10px;
+		inset-inline-end: 10px;
 	}
 
     .close{
@@ -275,11 +282,11 @@ header{
             }
             h6{
                 font-size: 30px;
-                font-family: var(--secondary-font);
+                // font-family: var(--secondary-font);
                 color: map-get($map: $color-map, $key:Maroon-90);
 				margin-bottom: 10px;
                 span{
-                    font-family: var(--secondary-font);
+                    // font-family: var(--secondary-font);
                     font-size: 30px;
                     font-weight: 700;
                 }
@@ -316,3 +323,4 @@ header{
     background: rgba(0, 0, 0, 0.7); /* Semi-transparent black */
 	z-index:999 !important /* Ensure it's above everything */
 }
+

@@ -1,8 +1,61 @@
 //font-family: "Roboto", sans-serif;
 // font-family: "Plus Jakarta Sans", serif;
+
+
+@font-face {
+    font-family: 'TheSans';
+    src: url('../fonts/TheSans-Plain_44259.ttf');
+    src:url('') format("");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}   
+@font-face {
+    font-family: 'TheSans';
+    src: url('../fonts/TheSans-Plain.otf');
+    src:url('') format("");
+    font-weight: 400;
+    font-style: normal;
+    font-display: swap;
+   
+}
+@font-face {
+    font-family: 'TheSans';
+    src: url('../fonts/TheSans-Bold.otf');
+    src:url('') format("");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;
+}
+@font-face {
+    font-family: 'GE_SS_Two';
+    src: url('../fonts/GE_SS_Two_Medium.otf');
+    src:url('') format("");
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;  
+}
+@font-face {
+    font-family: 'GE_SS_Two';
+    src: url('../fonts/GE_SS_Two_Bold.otf');
+    src:url('') format("");
+    font-weight: 700;
+    font-style: normal;
+    font-display: swap;  
+}
+@font-face {
+    font-family: 'GE_SS_Two';
+    src: url('../fonts/GE_SS_Two_Light.otf');
+    src:url('') format("");
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;  
+}
+
+
 :root {
-    --primary-font: "Plus Jakarta Sans", serif;
-    --secondary-font: "Source Serif 4", serif;
-    --bs-breadcrumb-font-size:"18px";
+    --primary-font: "TheSans", sans-serif;
+    --GE_SS_Two: "GE_SS_Two", Tahoma, Arial, sans-serif;
+//     --bs-breadcrumb-font-size:"18px";
     
 }

@@ -8,9 +8,9 @@ html(dir="ltr" lang="en")
         meta(property="og:title" content="")
         meta(property="og:description" content="")
         link(rel="icon" href="assets/images/favicon.ico" type="image/x-icon")
-        link(rel="preconnect" href="https://fonts.googleapis.com")
-        link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
-        link(href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet")
+        //- link(rel="preconnect" href="https://fonts.googleapis.com")
+        //- link(rel="preconnect" href="https://fonts.gstatic.com" crossorigin)
+        //- link(href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:ital,wght@0,200..800;1,200..800&family=Source+Serif+4:ital,opsz,wght@0,8..60,200..900;1,8..60,200..900&display=swap" rel="stylesheet")
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css")
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css")
         link(rel="stylesheet" href="assets/css/slick.css")
@@ -47,7 +47,7 @@ html(dir="ltr" lang="en")
                     //- button.play-pause.position-absolute 
                     //-     img.pause(src="assets/images/pause-03.png", alt="", srcset="")
                     //-     img.play.d-none(src="assets/images/play-icon.png", alt="", srcset="")
-                    a.d-flex.flex-column.gap-5.align-items-center.arrowDown#scrollBtn(href="#" data-scroll-target="#howMarshadWorks")
+                    a.d-flex.flex-column.gap-5.align-items-center.arrowDown#scrollBtn(href="#howMarshadWorks")
                         img(src="assets/images/arrowDown.png", alt="", srcset="") 
                         .line-arrow 
                         //- img(src="assets/images/line-arrow.png", alt="", srcset="")
@@ -73,7 +73,7 @@ html(dir="ltr" lang="en")
                                 img(src="assets/images/icons/x-twitter.png", alt="", srcset="")
                         a(href="").social-site.youtube 
                                 img(src="assets/images/icons/youtube.png", alt="", srcset="")
-                section.steps 
+                section.steps#howMarshadWorks 
                     .container
                         h2.section-title
                             | How 
@@ -104,10 +104,10 @@ html(dir="ltr" lang="en")
                                         p Lorem Ipsum has been the industry's standard dummy text ever since the 1500s
                                         a.mt-5.btn-large(href="./how-marshad-works.html") More Info
                 section.career-stages
-                    .stages-container
+                    .stages-container.dashboard-career-development-stages
                         h2.section-title
                             | Stages of career development
-                        .stages.d-flex.justify-content-center 
+                        .stages.position-relative.d-flex.justify-content-center 
                             .stage
                                 h6 Stage 
                                 .number 01
@@ -121,7 +121,7 @@ html(dir="ltr" lang="en")
                                 .number 02
                                 p.title.d-flex.align-items-center.gap-2 
                                     img(src="assets/images/research.png" alt="" srcset="") 
-                                    | Explore your needs
+                                    | Discover yourself
                                 .description 
                                     p Helping students identify what they need and want in life and career.
                             .stage
@@ -129,7 +129,7 @@ html(dir="ltr" lang="en")
                                 .number 03
                                 p.title.d-flex.align-items-center.gap-2
                                     img(src="assets/images/understand-opportunity.png" alt="" srcset="")  
-                                    | Explore your needs
+                                    | Understand opportunities
                                 .description 
                                     p Helping students identify what they need and want in life and career.
                             .stage.odd.align-self-end
@@ -137,7 +137,7 @@ html(dir="ltr" lang="en")
                                 .number 04
                                 p.title.d-flex.align-items-center.gap-2
                                     img(src="assets/images/informed-decision.png" alt="" srcset="") 
-                                    | Explore your needs
+                                    | Make informed decisions
                                 .description 
                                     p Helping students identify what they need and want in life and career.
                             .stage
@@ -145,7 +145,7 @@ html(dir="ltr" lang="en")
                                 .number 05
                                 p.title.d-flex.align-items-center.gap-2 
                                     img(src="assets/images/define-your-goal.png" alt="" srcset="")
-                                    | Explore your needs
+                                    | Define your plan
                                 .description 
                                     p Helping students identify what they need and want in life and career.
                                     
@@ -162,26 +162,42 @@ html(dir="ltr" lang="en")
                                     h6 Abdulla Al-mansoori
                                     p University Student
                             .waveline
-                                //- img(src="assets/images/line.png", alt="")
+                                img.invisible(src="assets/images/line.png", alt="")
                             .student 
                                 img(src="assets/images/student-02-img.png", alt="", srcset="")
                                 .student-desc
                                     h6 Abdulla Al-mansoori
                                     p University Student
                             .waveline
-                                //- img(src="assets/images/line.png", alt="")
+                                img.invisible(src="assets/images/line.png", alt="")
                             .student 
                                 img(src="assets/images/student-03-img.png", alt="", srcset="")
                                 .student-desc
                                     h6 Abdulla Al-mansoori
                                     p University Student
                             .waveline
-                                //- img.waveline(src="assets/images/line.png", alt="")
+                                img.invisible(src="assets/images/line.png", alt="")
                             .student 
                                 img(src="assets/images/student-04-img.png", alt="", srcset="")
                                 .student-desc
                                     h6 Abdulla Al-mansoori
                                     p University Student
+                            .waveline
+                                img.invisible(src="assets/images/line.png", alt="")
+                            .student 
+                                img(src="assets/images/student-04-img.png", alt="", srcset="")
+                                .student-desc
+                                    h6 Abdulla Al-mansoori
+                                    p University Student
+                            .waveline
+                                img.invisible(src="assets/images/line.png", alt="")
+                            .student 
+                                img(src="assets/images/student-04-img.png", alt="", srcset="")
+                                .student-desc
+                                    h6 Abdulla Al-mansoori
+                                    p University Student
+                            .waveline
+                                img.invisible(src="assets/images/line.png", alt="")
                         .testimonial-slider
                             .testimonial-item
                                 .video-thumnail.position-relative
@@ -196,6 +212,11 @@ html(dir="ltr" lang="en")
                                     p Marshad  has been an invaluable asset to my academic journey. The comprehensive resources, engaging study materials, and interactive features have significantly enhanced my learning experience. The platform's user-friendly interface and personalized learning plans have helped me stay organized and motivated.
                                     h4 Abdulla Al-mansoori
                                     span University Student
+                                    a.text-decoration-none.thumbnail-label.position-absolute.d-block.d-md-none(data-bs-toggle="modal" data-bs-target="#slideOnevideo")
+                                        .playCircle-wrapper
+                                            .playCircle 
+                                                img(src="assets/images/thumbnail-play-icon.png", alt="", srcset="")
+                                        //- span PLAY VIDEO
 
                             .testimonial-item
                                 .video-thumnail.position-relative
@@ -210,6 +231,11 @@ html(dir="ltr" lang="en")
                                     p Marshad  has been an invaluable asset to my academic journey. The comprehensive resources, engaging study materials, and interactive features have significantly enhanced my learning experience. The platform's user-friendly interface and personalized learning plans have helped me stay organized and motivated.
                                     h4 Abdulla Al-mansoori
                                     span University Student
+                                    a.text-decoration-none.thumbnail-label.position-absolute.d-block.d-md-none(data-bs-toggle="modal" data-bs-target="#slideOnevideo")
+                                        .playCircle-wrapper
+                                            .playCircle 
+                                                img(src="assets/images/thumbnail-play-icon.png", alt="", srcset="")
+                                        //- span PLAY VIDEO
                             .testimonial-item
                                 .video-thumnail.position-relative
                                     img(src="assets/images/thumbnail-img-000.png", alt="", srcset="")
@@ -223,6 +249,66 @@ html(dir="ltr" lang="en")
                                     p Marshad  has been an invaluable asset to my academic journey. The comprehensive resources, engaging study materials, and interactive features have significantly enhanced my learning experience. The platform's user-friendly interface and personalized learning plans have helped me stay organized and motivated.
                                     h4 Abdulla Al-mansoori
                                     span University Student
+                                    a.text-decoration-none.thumbnail-label.position-absolute.d-block.d-md-none(data-bs-toggle="modal" data-bs-target="#slideOnevideo")
+                                        .playCircle-wrapper
+                                            .playCircle 
+                                                img(src="assets/images/thumbnail-play-icon.png", alt="", srcset="")
+                                        //- span PLAY VIDEO
+                            .testimonial-item
+                                .video-thumnail.position-relative
+                                    img(src="assets/images/thumbnail-img-000.png", alt="", srcset="")
+                                    a.text-decoration-none.thumbnail-label.position-absolute(href="#" data-bs-toggle="modal" data-bs-target="#slideThreevideo")
+                                        .playCircle-wrapper
+                                            .playCircle 
+                                                img(src="assets/images/thumbnail-play-icon.png", alt="", srcset="")
+                                        span PLAY VIDEO 
+                                .testimonial-text
+                                    img.mb-2(src="assets/images/comma.png", alt="", srcset="")
+                                    p Marshad  has been an invaluable asset to my academic journey. The comprehensive resources, engaging study materials, and interactive features have significantly enhanced my learning experience. The platform's user-friendly interface and personalized learning plans have helped me stay organized and motivated.
+                                    h4 Abdulla Al-mansoori
+                                    span University Student
+                                    a.text-decoration-none.thumbnail-label.position-absolute.d-block.d-md-none(data-bs-toggle="modal" data-bs-target="#slideOnevideo")
+                                        .playCircle-wrapper
+                                            .playCircle 
+                                                img(src="assets/images/thumbnail-play-icon.png", alt="", srcset="")
+                                        //- span PLAY VIDEO
+                            .testimonial-item
+                                .video-thumnail.position-relative
+                                    img(src="assets/images/thumbnail-img-000.png", alt="", srcset="")
+                                    a.text-decoration-none.thumbnail-label.position-absolute(href="#" data-bs-toggle="modal" data-bs-target="#slideThreevideo")
+                                        .playCircle-wrapper
+                                            .playCircle 
+                                                img(src="assets/images/thumbnail-play-icon.png", alt="", srcset="")
+                                        span PLAY VIDEO 
+                                .testimonial-text
+                                    img.mb-2(src="assets/images/comma.png", alt="", srcset="")
+                                    p Marshad  has been an invaluable asset to my academic journey. The comprehensive resources, engaging study materials, and interactive features have significantly enhanced my learning experience. The platform's user-friendly interface and personalized learning plans have helped me stay organized and motivated.
+                                    h4 Abdulla Al-mansoori
+                                    span University Student
+                                    a.text-decoration-none.thumbnail-label.position-absolute.d-block.d-md-none(data-bs-toggle="modal" data-bs-target="#slideOnevideo")
+                                        .playCircle-wrapper
+                                            .playCircle 
+                                                img(src="assets/images/thumbnail-play-icon.png", alt="", srcset="")
+                                        //- span PLAY VIDEO
+                            .testimonial-item
+                                .video-thumnail.position-relative
+                                    img(src="assets/images/thumbnail-img-000.png", alt="", srcset="")
+                                    a.text-decoration-none.thumbnail-label.position-absolute(href="#" data-bs-toggle="modal" data-bs-target="#slideThreevideo")
+                                        .playCircle-wrapper
+                                            .playCircle 
+                                                img(src="assets/images/thumbnail-play-icon.png", alt="", srcset="")
+                                        span PLAY VIDEO 
+                                .testimonial-text
+                                    img.mb-2(src="assets/images/comma.png", alt="", srcset="")
+                                    p Marshad  has been an invaluable asset to my academic journey. The comprehensive resources, engaging study materials, and interactive features have significantly enhanced my learning experience. The platform's user-friendly interface and personalized learning plans have helped me stay organized and motivated.
+                                    h4 Abdulla Al-mansoori
+                                    span University Student
+                                    a.text-decoration-none.thumbnail-label.position-absolute.d-block.d-md-none(data-bs-toggle="modal" data-bs-target="#slideOnevideo")
+                                        .playCircle-wrapper
+                                            .playCircle 
+                                                img(src="assets/images/thumbnail-play-icon.png", alt="", srcset="")
+                                        //- span PLAY VIDEO
+                                    
                 #slideOnevideo.modal.story-modal.fade(data-bs-backdrop='static' data-bs-keyboard='false' tabindex='-1' aria-labelledby='slideOnevideo' aria-hidden='true')
                     .modal-dialog.modal-dialog-centered
                         .modal-content

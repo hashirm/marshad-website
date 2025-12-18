@@ -52,12 +52,18 @@ form{
             display: inline-block;
             cursor: pointer;
             height: 62px;
+            @include media-breakpoint-down(sm){
+                height: 100%;
+            }
         }
         label.second-step{
             max-width: 100%;
         }
         input[type="radio"]{
             appearance: none;
+            @include media-breakpoint-down(sm){
+                position: absolute;
+            }
         }
         .radio-mark{
             img{
@@ -343,6 +349,10 @@ form{
   }
   .modal-content{
     border-radius: 30px;
+    @include media-breakpoint-down(sm){
+        margin: 0 12px;
+
+    }
     .modal-body{
         padding:40px 70px;
 

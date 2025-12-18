@@ -2,7 +2,7 @@ doctype html
 html(dir="rtl" lang="ar")
     head
         meta(charset="UTF-8")
-        meta(name="viewport", content="width=device-width, initial-scale=1.0")
+        meta(name="viewport" content="width=device-width, initial-scale=1.0")
         meta(name="description" content="")
         meta(name="keywords" content="")
         meta(property="og:title" content="")
@@ -14,124 +14,76 @@ html(dir="rtl" lang="ar")
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.css")
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick-theme.min.css")
         link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css" integrity="sha512-SnH5WK+bZxgPHs44uWIX+LLJAJ9/2PkPKZ5QiAj6Ta86w+fsb2TkcmfRyVX3pBnMFcV7oQPJkl9QevSCWr3W6A==" crossorigin="anonymous" referrerpolicy="no-referrer")
+        link(rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/css/intlTelInput.css")
+        link(rel="stylesheet" href="assets/css/slick.css")
+
 
         noscript
             link(rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;700&display=swap")
 
-        //- link(rel="stylesheet", href="assets/_css/app.css" media="print" onload="this.onload=null;this.removeAttribute('media');")
-        link(rel="stylesheet", href="assets/css/app.min.css" media="print" onload="this.onload=null;this.removeAttribute('media');")    
+        //- link(rel="stylesheet" href="assets/_css/app.css" media="print" onload="this.onload=null;this.removeAttribute('media');")
+        link(rel="stylesheet" href="assets/css/app.min.css" media="print" onload="this.onload=null;this.removeAttribute('media');")    
         noscript
-            //- link(rel="stylesheet", href="assets/_css/app.css")
-            link(rel="stylesheet", href="assets/css/app.min.css")
-            
+            //- link(rel="stylesheet" href="assets/_css/app.css")
+            link(rel="stylesheet" href="assets/css/app.min.css")
+
         title Dashboard
     body
         include ../partials/_dashboardHeader
+
         .full-page-overlay-filter.d-none 
-        
+
         main.dashboard-home
             .dashboard-container
                 .welcome-to-marshad.d-flex.flex-column.gap-3.gap-lg-0.flex-lg-row.justify-content-between.align-items-center
                     .welcome-text
-                        h1.text-center.text-lg-start Welcome to Marshad!
-                        p.text-center.text-lg-start Your guide to choosing the right major and career path!
+                        h1 Welcome to Marshad!
+                        p Your guide to choosing the right major and career path!
                     .welcome-btn 
                         a.text-decoration-none.border-0.btn-large.text-white(href="#")
                             | Discover Universities
-                            img.position-absolute(src="assets/images/icons/arrowLeft.png", alt="", srcset="")
+                            img.position-absolute(src="assets/images/icons/arrowLeft.png" alt="" srcset="")
                 section
                     h2 
                         | Recommendations
                     p 
                         | Please select your program
-                       
+
                     ul#pills-tab.nav.nav-pills.mb-3(role='tablist')
                         li.nav-item(role='presentation')
                             button#pills-home-tab.nav-link.active(data-bs-toggle='pill' data-bs-target='#pills-home' type='button' role='tab' aria-controls='pills-home' aria-selected='true') University Major
                         li.nav-item(role='presentation')
                             button#pills-profile-tab.nav-link(data-bs-toggle='pill' data-bs-target='#pills-profile' type='button' role='tab' aria-controls='pills-profile' aria-selected='false') Government Scholarship Program
-                        
+                        li.nav-item(role='presentation')
+                            button#pills-third-tab.nav-link(data-bs-toggle='pill' data-bs-target='#pills-third' type='button' role='tab' aria-controls='pills-third' aria-selected='false') Third Tab
+                        li.nav-item(role='presentation')
+                            button#pills-fourth-tab.nav-link(data-bs-toggle='pill' data-bs-target='#pills-fourth' type='button' role='tab' aria-controls='pills-fourth' aria-selected='false') Fourth Tab
+
                     #pills-tabContent.tab-content.position-relative 
-                        .filter-box.position-absolute   
-                            h4 FILTERS
-                            .filter-box-content
-                                p What are your academic interests or fields that spark your curiosity? 
-                                form(action="")
-                                    .form-content.d-flex.gap-2.flex-wrap
-                                        .checkboxes-wrapper
-                                            label.position-relative(for="technology") 
-                                                input#technology(type="checkbox", name="technology") 
-                                                | Technology
-                                        .checkboxes-wrapper
-                                            label.position-relative(for="literature") 
-                                                input#literature(type="checkbox", name="literature") 
-                                                | Literature
-                                        .checkboxes-wrapper
-                                            label.position-relative(for="business") 
-                                                input#business(type="checkbox", name="business") 
-                                                | Business
-                                        .checkboxes-wrapper
-                                            label.position-relative(for="arts") 
-                                                input#arts(type="checkbox", name="arts") 
-                                                | Arts
-                                        .checkboxes-wrapper
-                                            label.position-relative(for="science") 
-                                                input#science(type="checkbox", name="science") 
-                                                | Science
-                            .filter-box-content
-                                p Do you prefer working in an office environment or in the field?  
-                                form(action="")
-                                    .form-content.d-flex.gap-2.flex-wrap
-                                        .checkboxes-wrapper
-                                            label.position-relative(for="office") 
-                                                input#office(type="checkbox", name="office") 
-                                                | Office
-                                        .checkboxes-wrapper
-                                            label.position-relative(for="field") 
-                                                input#field(type="checkbox", name="field") 
-                                                | Field
-                                        .checkboxes-wrapper
-                                            label.position-relative(for="both") 
-                                                input#both(type="checkbox", name="both") 
-                                                | Both
-                                       
-                            .filter-box-content
-                                p Are you interested in studying in Qatar or abroad? 
-                                form(action="")
-                                    .form-content.d-flex.gap-2.flex-wrap
-                                        .checkboxes-wrapper
-                                            label.position-relative(for="qatar") 
-                                                input#qatar(type="checkbox", name="qatar") 
-                                                | Qatar
-                                        .checkboxes-wrapper
-                                            label.position-relative(for="abroad") 
-                                                input#abroad(type="checkbox", name="abroad") 
-                                                | Abroad
-                                        .checkboxes-wrapper
-                                            label.position-relative(for="studyboth") 
-                                                input#studyboth(type="checkbox", name="studyboth") 
-                                                | Both
-                                       
+                        include ../partials/modals/_filter-modal
+
                         #pills-home.tab-pane.fade.show.active(role='tabpanel' aria-labelledby='pills-home-tab' tabindex='0')
                             .pills-btn.position-relative.d-flex.justify-content-end.align-items-center 
                                 .filter-btn.position-absolute
-                                    img(src="assets/images/funnel.png", alt="", srcset="") 
+                                    img(src="assets/images/funnel.png" alt="" srcset="") 
                                     a(href="javascript:void(0)") Filter 
-                                    img(src="assets/images/downArrow.png", alt="", srcset="") 
+                                    img(src="assets/images/downArrow.png" alt="" srcset="") 
                             .cards-slider 
                                 .cards-slider-item
-                                    .cards-wrapper 
-                                        .cards.d-flex
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/aeronautical-1-img.png);background-size:cover")
                                             .card-text
-                                                a(href="#") Best Fit
+                                                //- button Best Fit
                                                 h3 Engineering
                                                 ul 
                                                     li Problem-Solving Skills 
                                                     li Mathematical Proficiency
                                                     li Analytical Thinking
                                             .card-img 
-                                                img(src="assets/images/card-img-01.png", alt="")
-                                        .cards.d-flex
+                                                img(src="assets/images/card-img-01-02.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/science-bg-img.png);background-size:cover")
                                             .card-text
                                                 h3 Science
                                                 ul 
@@ -139,20 +91,22 @@ html(dir="rtl" lang="ar")
                                                     li Mathematical Proficiency
                                                     li Analytical Thinking
                                             .card-img 
-                                                img(src="assets/images/science.png", alt="")
+                                                img(src="assets/images/card-img-02-02.png" alt="")
                                 .cards-slider-item
-                                    .cards-wrapper 
-                                        .cards.d-flex
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/medical-bg-img.png);background-size:cover")
                                             .card-text
-                                                a(href="#") Best Fit
+                                                //- button Best Fit
                                                 h3 Medical
                                                 ul 
                                                     li Problem-Solving Skills 
                                                     li Mathematical Proficiency
                                                     li Analytical Thinking
                                             .card-img 
-                                                img(src="assets/images/medical.png", alt="")
-                                        .cards.d-flex
+                                                img(src="assets/images/card-img-03-02.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/media-bg-img.png);background-size:cover")
                                             .card-text
                                                 h3 Media
                                                 ul 
@@ -160,10 +114,10 @@ html(dir="rtl" lang="ar")
                                                     li Mathematical Proficiency
                                                     li Analytical Thinking
                                             .card-img 
-                                                img(src="assets/images/media.png", alt="")
+                                                img(src="assets/images/card-img-04-02.png" alt="")
                                 .cards-slider-item
-                                    .cards-wrapper 
-                                        .cards.d-flex
+                                    a.text-decoration-none.cards-wrapper(href="#") 
+                                        .cards.d-flex(style="background-image:url(assets/images/tourism-bg-img.png);background-size:cover")
                                             .card-text
                                                 h3 Tourism
                                                 ul 
@@ -171,8 +125,10 @@ html(dir="rtl" lang="ar")
                                                     li Mathematical Proficiency
                                                     li Analytical Thinking
                                             .card-img 
-                                                img(src="assets/images/tourism.png", alt="")
-                                        .cards.d-flex
+                                                img(src="assets/images/card-img-05-02.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/law-bg-img.png);background-size:cover")
                                             .card-text
                                                 h3 Law
                                                 ul 
@@ -180,110 +136,486 @@ html(dir="rtl" lang="ar")
                                                     li Mathematical Proficiency
                                                     li Analytical Thinking
                                             .card-img 
-                                                img(src="assets/images/law.png", alt="")
-                                       
+                                                img(src="assets/images/card-img-06-02.png" alt="")
+
                                 .cards-slider-item
-                                    .cards-wrapper 
-                                        .cards.d-flex
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/social-bg-img.png);background-size:cover")
                                             .card-text
-                                                a(href="#") Best Fit
-                                                h3 Engineering
+                                                //- button Best Fit
+                                                h3 Social Sciences and Arts
                                                 ul 
                                                     li Problem-Solving Skills 
                                                     li Mathematical Proficiency
                                                     li Analytical Thinking
                                             .card-img 
-                                                img(src="assets/images/card-img-01.png", alt="")
-                                        .cards.d-flex
-                                            .card-text
-                                                a(href="#") Best Fit
-                                                h3 Engineering
-                                                ul 
-                                                    li Problem-Solving Skills 
-                                                    li Mathematical Proficiency
-                                                    li Analytical Thinking
-                                            .card-img 
-                                                img(src="assets/images/card-img-01.png", alt="")
+                                                img(src="assets/images/card-img-07.png" alt="")
                                 .cards-slider-item
-                                    .cards-wrapper 
-                                        .cards.d-flex
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/education-bg-img.png);background-size:cover")
                                             .card-text
-                                                a(href="#") Best Fit
-                                                h3 Engineering
+                                                //- button Best Fit
+                                                h3 Educational Studies
                                                 ul 
                                                     li Problem-Solving Skills 
                                                     li Mathematical Proficiency
                                                     li Analytical Thinking
                                             .card-img 
-                                                img(src="assets/images/card-img-01.png", alt="")
-                                        .cards.d-flex
-                                            .card-text
-                                                a(href="#") Best Fit
-                                                h3 Engineering
-                                                ul 
-                                                    li Problem-Solving Skills 
-                                                    li Mathematical Proficiency
-                                                    li Analytical Thinking
-                                            .card-img 
-                                                img(src="assets/images/card-img-01.png", alt="")
+                                                img(src="assets/images/card-img-08.png" alt="")
                                 .cards-slider-item
-                                    .cards-wrapper 
-                                        .cards.d-flex
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/sharia-bg-img.png);background-size:cover")
                                             .card-text
-                                                a(href="#") Best Fit
-                                                h3 Engineering
+                                                //- button Best Fit
+                                                h3 Sharia and Islamic Studies
                                                 ul 
                                                     li Problem-Solving Skills 
                                                     li Mathematical Proficiency
                                                     li Analytical Thinking
                                             .card-img 
-                                                img(src="assets/images/card-img-01.png", alt="")
-                                        .cards.d-flex
+                                                img(src="assets/images/card-img-09.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/banking-bg-img.png);background-size:cover")
                                             .card-text
-                                                a(href="#") Best Fit
-                                                h3 Engineering
+                                                //- button Best Fit
+                                                h3 Banking and Financial
                                                 ul 
                                                     li Problem-Solving Skills 
                                                     li Mathematical Proficiency
                                                     li Analytical Thinking
                                             .card-img 
-                                                img(src="assets/images/card-img-01.png", alt="")         
-                                
+                                                img(src="assets/images/card-img-10.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/art-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Arts and Design
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-11.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/aeronautical-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Aeronautical Sciences
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/plan.png" alt="")         
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/military-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Military
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/soldier.png" alt="")         
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/energy-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Energy
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/air-elec.png" alt="")      
+
                         #pills-profile.tab-pane.fade(role='tabpanel' aria-labelledby='pills-profile-tab' tabindex='0')
                             .certificates-slider 
-                                .certificate-item 
+                                a.certificate-item(href="#") 
                                     .certificate-wrapper 
-                                        img(src="assets/images/education_10484466 1.png", alt="")
+                                        img(src="assets/images/education_10484466 1.png" alt="")
                                         h3.certificate-text Bachelor's Degrees
-                                        a.certificate-detail-link(href="#") 
-                                            img(src="assets/images/icons/arrow-cap-right.png", alt="", srcset="")
-                                .certificate-item 
+                                        .certificate-detail-link 
+                                            img(src="assets/images/icons/arrow-cap-right.png" alt="" srcset="")
+                                a.certificate-item(href="#") 
                                     .certificate-wrapper 
-                                        img(src="assets/images/education_10484466 1.png", alt="")
+                                        img(src="assets/images/education_10484466 1.png" alt="")
                                         h3.certificate-text Bachelor's Degrees
-                                        a.certificate-detail-link(href="#") 
-                                            img(src="assets/images/icons/arrow-cap-right.png", alt="", srcset="")
-                                .certificate-item 
+                                        .certificate-detail-link
+                                            img(src="assets/images/icons/arrow-cap-right.png" alt="" srcset="")
+                                a.certificate-item(href="#") 
                                     .certificate-wrapper 
-                                        img(src="assets/images/education_10484466 1.png", alt="")
+                                        img(src="assets/images/education_10484466 1.png" alt="")
                                         h3.certificate-text Bachelor's Degrees
-                                        a.certificate-detail-link(href="#") 
-                                            img(src="assets/images/icons/arrow-cap-right.png", alt="", srcset="")
-                                .certificate-item 
+                                        .certificate-detail-link 
+                                            img(src="assets/images/icons/arrow-cap-right.png" alt="" srcset="")
+                                a.certificate-item(href="#") 
                                     .certificate-wrapper 
-                                        img(src="assets/images/education_10484466 1.png", alt="")
+                                        img(src="assets/images/education_10484466 1.png" alt="")
                                         h3.certificate-text Bachelor's Degrees
-                                        a.certificate-detail-link(href="#") 
-                                            img(src="assets/images/icons/arrow-cap-right.png", alt="", srcset="")
-                                .certificate-item 
+                                        .certificate-detail-link
+                                            img(src="assets/images/icons/arrow-cap-right.png" alt="" srcset="")
+                                a.certificate-item(href="#") 
                                     .certificate-wrapper 
-                                        img(src="assets/images/education_10484466 1.png", alt="")
+                                        img(src="assets/images/education_10484466 1.png" alt="")
                                         h3.certificate-text Bachelor's Degrees
-                                        a.certificate-detail-link(href="#") 
-                                            img(src="assets/images/icons/arrow-cap-right.png", alt="", srcset="")
+                                        .certificate-detail-link
+                                            img(src="assets/images/icons/arrow-cap-right.png" alt="" srcset="")
+                        #pills-third.tab-pane.fade(role='tabpanel' aria-labelledby='pills-third-tab' tabindex='0')
+                            .pills-btn.position-relative.d-flex.justify-content-end.align-items-center 
+                                .filter-btn.position-absolute
+                                    img(src="assets/images/funnel.png" alt="" srcset="") 
+                                    a(href="javascript:void(0)") Filter 
+                                    img(src="assets/images/downArrow.png" alt="" srcset="") 
+                            .cards-slider 
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/aeronautical-1-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Engineering
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-01-02.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/science-bg-img.png);background-size:cover")
+                                            .card-text
+                                                h3 Science
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-02-02.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/medical-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Medical
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-03-02.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/media-bg-img.png);background-size:cover")
+                                            .card-text
+                                                h3 Media
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-04-02.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#") 
+                                        .cards.d-flex(style="background-image:url(assets/images/tourism-bg-img.png);background-size:cover")
+                                            .card-text
+                                                h3 Tourism
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-05-02.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/law-bg-img.png);background-size:cover")
+                                            .card-text
+                                                h3 Law
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-06-02.png" alt="")
 
-                 
-                                           
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/social-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Social Sciences and Arts
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-07.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/education-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Educational Studies
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-08.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/sharia-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Sharia and Islamic Studies
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-09.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/banking-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Banking and Financial
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-10.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/art-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Arts and Design
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-11.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/aeronautical-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Aeronautical Sciences
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/plan.png" alt="")         
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/military-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Military
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/soldier.png" alt="")         
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/energy-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Energy
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/air-elec.png" alt="") 
+
+                        #pills-fourth.tab-pane.fade(role='tabpanel' aria-labelledby='pills-fourth-tab' tabindex='0')
+                            .pills-btn.position-relative.d-flex.justify-content-end.align-items-center 
+                                .filter-btn.position-absolute
+                                    img(src="assets/images/funnel.png" alt="" srcset="") 
+                                    a(href="javascript:void(0)") Filter 
+                                    img(src="assets/images/downArrow.png" alt="" srcset="") 
+                            .cards-slider 
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/aeronautical-1-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Engineering
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-01-02.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/science-bg-img.png);background-size:cover")
+                                            .card-text
+                                                h3 Science
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-02-02.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/medical-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Medical
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-03-02.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/media-bg-img.png);background-size:cover")
+                                            .card-text
+                                                h3 Media
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-04-02.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#") 
+                                        .cards.d-flex(style="background-image:url(assets/images/tourism-bg-img.png);background-size:cover")
+                                            .card-text
+                                                h3 Tourism
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-05-02.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/law-bg-img.png);background-size:cover")
+                                            .card-text
+                                                h3 Law
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-06-02.png" alt="")
+
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/social-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Social Sciences and Arts
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-07.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/education-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Educational Studies
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-08.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/sharia-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Sharia and Islamic Studies
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-09.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/banking-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Banking and Financial
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-10.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/art-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Arts and Design
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/card-img-11.png" alt="")
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/aeronautical-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Aeronautical Sciences
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/plan.png" alt="")         
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/military-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Military
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/soldier.png" alt="")         
+                                .cards-slider-item
+                                    a.text-decoration-none.cards-wrapper(href="#")
+                                        .cards.d-flex(style="background-image:url(assets/images/energy-bg-img.png);background-size:cover")
+                                            .card-text
+                                                //- button Best Fit
+                                                h3 Energy
+                                                ul 
+                                                    li Problem-Solving Skills 
+                                                    li Mathematical Proficiency
+                                                    li Analytical Thinking
+                                            .card-img 
+                                                img(src="assets/images/air-elec.png" alt="") 
+
+
+
+
                 section.dashboard-career-development-stages
                     h2 
                         | Stages of career development
@@ -330,15 +662,7 @@ html(dir="rtl" lang="ar")
                                     | Explore your needs
                                 .description 
                                     p Helping students identify what they need and want in life and career.
-                                    
-                            .stage-popup-wrapper
-                                .cross.position-absolute 
-                                    img(src="assets/images/cross.png", alt="", srcset="")
-                                img(src="assets/images/border-line-popup.png", alt="")
-                                .stage-popup 
-                                    h5 Explore your needs   
-                                    p.mb-2 Helping students identify what they need and want in life and career.
-                                    a.d-block.btn-large.w-100.text-white(href="#") More Info 
+                            include ../partials/modals/_homepage-stages-modal      
                 section.marketing 
                     h2 
                         | Marketing Section
@@ -349,38 +673,41 @@ html(dir="rtl" lang="ar")
                                     h3 Are you looking for Job opportunities?
                                     a(href="#") Click here
                                 .item-img
-                                    img(src="assets/images/Al-Dileela_logo_Color 2.png", alt="", srcset="") 
+                                    img(src="assets/images/Al-Dileela_logo_Color 2.png" alt="" srcset="") 
                         .marketing-item
                             .marketing-slider-content-wrapper 
                                 .item-text 
                                     h3 Are you looking for Job opportunities?
                                     a(href="#") Click here
                                 .item-img
-                                    img(src="assets/images/Al-Dileela_logo_Color 2.png", alt="", srcset="") 
+                                    img(src="assets/images/atlas-powered.png" alt="" srcset="") 
+                        .marketing-item
+                            .marketing-slider-content-wrapper 
+                                .item-text 
+                                    h3 Are you looking for career guidance?
+                                    p Join our community of over 15,000+ members
+                                    a(href="#") Click here
+                                .item-img
+                                    img(src="assets/images/career-village02.png" alt="" srcset="") 
                         .marketing-item
                             .marketing-slider-content-wrapper 
                                 .item-text 
                                     h3 Are you looking for Job opportunities?
                                     a(href="#") Click here
                                 .item-img
-                                    img(src="assets/images/Al-Dileela_logo_Color 2.png", alt="", srcset="") 
-                        .marketing-item
-                            .marketing-slider-content-wrapper 
-                                .item-text 
-                                    h3 Are you looking for Job opportunities?
-                                    a(href="#") Click here
-                                .item-img
-                                    img(src="assets/images/Al-Dileela_logo_Color 2.png", alt="", srcset="") 
+                                    img(src="assets/images/Al-Dileela_logo_Color 2.png" alt="" srcset="") 
                 include ../partials/_footer-footer
 
-                    
-        
+
+
         //- include ../partials/_footer
         script(src='https://code.jquery.com/jquery-3.6.0.min.js')
         script(src='https://cdnjs.cloudflare.com/ajax/libs/slick-carousel/1.8.1/slick.min.js')
+        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js')
+        script(src="https://cdnjs.cloudflare.com/ajax/libs/intl-tel-input/17.0.13/js/intlTelInput-jquery.min.js")
+        script(src="assets/js/dashboard-header.js")
         script(src="assets/js/header.js")
         script(src="assets/js/home.js")
-        script(src='https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js')
         script(type="importmap" defer).
             {
                 "imports": {
@@ -388,8 +715,8 @@ html(dir="rtl" lang="ar")
                     "bootstrap": "https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.esm.min.js"
                 }
             }
-        script(async, src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js", crossorigin="anonymous")
-        
-      
-     
+        script(async, src="https://cdn.jsdelivr.net/npm/es-module-shims@1/dist/es-module-shims.min.js" crossorigin="anonymous")
+
+
+
             //- new Popover(document.getElementById('popoverButton'))

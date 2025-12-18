@@ -37,6 +37,9 @@ header.header-dashboard{
                 .searchInput{
                     max-width: 613px;
                     width: 100%;
+                    form{
+                        margin-bottom: 0;
+                    }
                     .search-icon{
                         width: 40px;
                         height: 40px;
@@ -92,7 +95,15 @@ header.header-dashboard{
                         border: 1px solid rgba(0, 0, 0, 0.4);
                         color: map-get($map: $color-map, $key: bistre-90);
                         font-weight: 700;
-                        
+                        html[dir="rtl"] & {
+                            font-family: var(--GE_SS_Two);
+                        }
+                    }
+                    .lang:nth-of-type(1){
+                        font-family: var(--GE_SS_Two);
+                        html[dir="rtl"] & {
+                            font-family: var(--primary-font);
+                        }
                     }
                 }
                 
@@ -152,7 +163,7 @@ header.header-dashboard{
     }
     // transform: translate(0, -542px);
     .searh-box-title{
-        font-family:var(--secondary-font);
+        // font-family:var(--secondary-font);
         font-weight: 600;
         font-size: 26px;
         color: map-get($map: $color-map, $key: bistre-10);
@@ -203,7 +214,7 @@ header.header-dashboard{
     }
 
     h4{
-        font-family: var(--secondary-font);
+        // font-family: var(--secondary-font);
         font-size: 18px;
         font-weight: 600;
         color: map-get($map: $color-map, $key: grey);
@@ -316,7 +327,7 @@ header.header-dashboard{
             }
 
             h2{
-                font-family: var(--secondary-font);
+                // font-family: var(--secondary-font);
                 font-size: 32px;
                 font-weight: 700;
                 color: map-get($map: $color-map, $key:bg-primary );
@@ -385,7 +396,7 @@ header.header-dashboard{
       margin-bottom: 17px;
     }
 
-   .iti .iti__selected-flag .iti__flag{
+//    .iti .iti__selected-flag .iti__flag{
         // height: 22px;
         // width: 22px;
 
@@ -393,7 +404,7 @@ header.header-dashboard{
         // border-radius: 50%;
 
         // background-size: contain;
-    }
+    // }
 
     .iti--separate-dial-code .iti__selected-flag{
         background: transparent;

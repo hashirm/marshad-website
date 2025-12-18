@@ -15,7 +15,7 @@
     }
     form{
         label{
-            font-family:var(--secondary-font);
+            // font-family:var(--secondary-font);
             font-weight: 700;
             color:rgba(150, 44, 76, 1);
             font-size:32px;
@@ -75,7 +75,7 @@ main{
             }
             
             h1{
-                font-family:var(--secondary-font);
+                // font-family:var(--secondary-font);
                 font-size:18px;
                 font-weight:600;
                 color: map-get($map: $color-map, $key: black);
